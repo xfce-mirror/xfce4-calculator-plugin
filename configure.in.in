@@ -42,6 +42,8 @@ AC_PROG_INSTALL()
 AC_PROG_LIBTOOL()
 AC_PROG_INTLTOOL()
 
+AC_CHECK_LIB([m], [exp])
+
 dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
