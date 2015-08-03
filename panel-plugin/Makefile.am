@@ -35,13 +35,13 @@ calctest_SOURCES =							\
 
 xfce4_calculator_plugin_CFLAGS =					\
 	$(LIBXFCE4UTIL_CFLAGS)						\
-	$(LIBXFCEGUI4_CFLAGS)						\
+	$(LIBXFCE4UI_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
 xfce4_calculator_plugin_LDADD =						\
 	$(LIBXFCE4UTIL_LIBS)						\
-	$(LIBXFCEGUI4_LIBS)						\
+	$(LIBXFCE4UI_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
 
 calctest_CFLAGS = $(xfce4_calculator_plugin_CFLAGS)

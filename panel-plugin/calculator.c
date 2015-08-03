@@ -26,7 +26,7 @@
 #include <locale.h>
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
-#include <libxfcegui4/libxfcegui4.h>
+#include <libxfce4ui/libxfce4ui.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
 #include <libxfce4panel/xfce-hvbox.h>
 #include "parsetree.h"
@@ -145,7 +145,7 @@ static void entry_enter_cb(GtkEntry *entry, CalcPlugin *calc)
     input = gtk_entry_get_text(entry);
     parsetree = build_parse_tree(input, &err);
     if (err) {
-        xfce_err("Calculator error: %s", err->message);
+		xfce_dialog_show_error (NULL, NULL, "Calculator error: %s", err->message);
         g_error_free(err);
         free_parsetree(parsetree);
         return;
@@ -374,7 +374,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
                      G_CALLBACK(calc_dialog_response), calc);
 
 
-	frame = xfce_create_framebox(_("Appearance"), &bin);
+	frame = xfce_gtk_frame_box_new (_("Appearance"), &bin);
 
 	gtk_container_set_border_width(GTK_CONTAINER(frame), 6);
 	gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), frame, TRUE, TRUE, 0);
@@ -397,7 +397,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
                      G_CALLBACK(calc_plugin_size_changed), calc);
 
 
-    frame = xfce_create_framebox (_("History"), &bin);
+    frame = xfce_gtk_frame_box_new (_("History"), &bin);
 
     gtk_container_set_border_width(GTK_CONTAINER (frame), 6);
     gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), frame, TRUE, TRUE, 0);
@@ -421,6 +421,31 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     gtk_widget_show(dialog);
 
 }
+
+void calc_about (XfcePanelPlugin *plugin)
+{
+       GdkPixbuf *icon;
+   const gchar *authors[] = {
+      "Erik Edelmann <erik.edelmann@iki.fi>",
+      "Adrian Dimitrov <enzo_01@abv.bg>", NULL };
+   icon = xfce_panel_pixbuf_from_source("xfce4-calculator-plugin", NULL, 32);
+   gtk_show_about_dialog(NULL,
+      "logo", icon,
+      "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
+      "version", PACKAGE_VERSION,
+      "program-name", PACKAGE_NAME,
+      "comments", _("Calculator for XFCE panel"),
+      "website", "https://github.com/erike/xfce4-calculator-plugin",
+      "copyright", _("Copyright (c) 2003-2015\n"),
+      "authors", authors, NULL);
+
+   if(icon)
+      g_object_unref(G_OBJECT(icon));
+
+}
+
+
+
 
 
 static void calc_construct(XfcePanelPlugin *plugin)
@@ -452,6 +477,12 @@ static void calc_construct(XfcePanelPlugin *plugin)
     xfce_panel_plugin_menu_show_configure(plugin);
     g_signal_connect(G_OBJECT(plugin), "configure-plugin",
                      G_CALLBACK(calc_configure), calc);
+
+	/* Show the about menu item and connect signal */
+	xfce_panel_plugin_menu_show_about (plugin);
+	g_signal_connect (G_OBJECT (plugin), "about",
+		G_CALLBACK (calc_about), calc);
+
 
 
     // Add controls for choosing angle unit to the menu.
