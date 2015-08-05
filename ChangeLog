@@ -1,3 +1,7 @@
+2015-08-05: Roland Kuebert <roland@upic.de>
+
+		* configure.in.in: Bumped micro version.
+
 2010-03-17: Erik Edelmann <erik.edelmann@iki.fi>
 
         * panel-plugin/calculator.c (calc_construct): Set LC_NUMERIC locale
