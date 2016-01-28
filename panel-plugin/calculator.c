@@ -427,16 +427,17 @@ void calc_about (XfcePanelPlugin *plugin)
        GdkPixbuf *icon;
    const gchar *authors[] = {
       "Erik Edelmann <erik.edelmann@iki.fi>",
-      "Adrian Dimitrov <enzo_01@abv.bg>", NULL };
+      "Adrian Dimitrov <enzo_01@abv.bg>",
+      "Roland Kuebert <roland@upic.de>", NULL };
    icon = xfce_panel_pixbuf_from_source("xfce4-calculator-plugin", NULL, 32);
    gtk_show_about_dialog(NULL,
       "logo", icon,
       "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
       "version", PACKAGE_VERSION,
       "program-name", PACKAGE_NAME,
-      "comments", _("Calculator for XFCE panel"),
-      "website", "https://github.com/erike/xfce4-calculator-plugin",
-      "copyright", _("Copyright (c) 2003-2015\n"),
+      "comments", _("Calculator for Xfce panel"),
+      "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-calculator-plugin",
+      "copyright", _("Copyright (c) 2003-2016\n"),
       "authors", authors, NULL);
 
    if(icon)
