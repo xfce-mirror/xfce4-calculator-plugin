@@ -51,7 +51,7 @@ void calc(const char *input, char *result, size_t result_len)
         g_error_free(err);
     } else if (parsetree) {
         r = eval_parse_tree(parsetree, FALSE);
-        snprintf(result, result_len, "%g\n", r);
+        snprintf(result, result_len, "%.19g\n", r);
     } else
         snprintf(result, result_len, "böö\n");
     free_parsetree(parsetree);

@@ -35,3 +35,6 @@ po/POTFILES
 po/stamp-it
 stamp-h1
 test-driver
+panel-plugin/calctest
+tests/*.log
+tests/*.trs

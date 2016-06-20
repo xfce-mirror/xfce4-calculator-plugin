@@ -3,6 +3,7 @@
 SUBDIRS =								\
 	icons								\
 	panel-plugin 							\
+	tests								\
 	po
 
 distclean-local:
