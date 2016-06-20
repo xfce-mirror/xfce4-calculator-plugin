@@ -26,6 +26,7 @@ typedef enum { NODE_OPERATOR, NODE_NUMBER, NODE_FUNCTION } node_type_t;
 typedef enum { OP_PLUS, OP_MINUS,
                OP_UMINUS,
                OP_TIMES, OP_DIV,
+               OP_MODULO,
                OP_POW } operator_type_t;
 
 typedef struct _node_t {

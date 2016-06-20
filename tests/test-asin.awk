@@ -5,8 +5,9 @@ function abs(x) {
 }
 
 BEGIN{
-    "./calctest '4.5 + 7/2'" | getline res
-    if (abs(res - 8.0) > 1.0e-15) {
+    expr = "'pi/asin(-1) + pi/arcsin(-1)'"
+    "../panel-plugin/calctest " expr | getline res
+    if (abs(res - -4) > 1.0e-14) {
         print res
         exit 1
     } else

@@ -5,8 +5,9 @@ function abs(x) {
 }
 
 BEGIN{
-    "./calctest '10 - 4 - 3'" | getline res
-    if (abs(res - 3.0) > 1.0e-15) {
+    expr = "'-pi'"
+    "../panel-plugin/calctest " expr | getline res
+    if (abs(res - -3.1415926535897932) > 1.0e-14) {
         print res
         exit 1
     } else
