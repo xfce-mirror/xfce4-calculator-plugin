@@ -39,6 +39,7 @@
 #define DEFAULT_DEGREES FALSE
 #define DEFAULT_SIZE 20
 #define DEFAULT_HIST_SIZE 25
+#define DEFAULT_OUTPUT_BASE 10
 
 
 typedef struct {
@@ -49,6 +50,7 @@ typedef struct {
     GtkWidget *combo;
     GtkWidget *degrees_button;
     GtkWidget *radians_button;
+    GtkWidget *hexadecimal_button;
 
     GList *expr_hist;   // Expression history
     
@@ -56,6 +58,7 @@ typedef struct {
     gboolean degrees; // Degrees or radians for trigonometric functions?
     gint size;		  // Size of comboboxentry 
     gint hist_size;
+    gint output_base; // 10 = decimal, 16 = hexadecimal. Other values are not supported
 } CalcPlugin;
 
 
@@ -79,6 +82,7 @@ void calc_save_config(XfcePanelPlugin *plugin, CalcPlugin *calc)
         xfce_rc_write_bool_entry(rc, "degrees", calc->degrees);
         xfce_rc_write_int_entry(rc, "size", calc->size);
         xfce_rc_write_int_entry(rc, "hist_size", calc->hist_size);
+        xfce_rc_write_int_entry(rc, "output_base", calc->output_base);
         xfce_rc_close(rc);
     }
 }
@@ -101,12 +105,14 @@ static void calc_read_config(CalcPlugin *calc)
         calc->degrees = xfce_rc_read_bool_entry(rc, "degrees", DEFAULT_DEGREES);
         calc->size = xfce_rc_read_int_entry(rc, "size", DEFAULT_SIZE);
         calc->hist_size = xfce_rc_read_int_entry(rc, "hist_size", DEFAULT_HIST_SIZE);
+        calc->output_base = xfce_rc_read_int_entry(rc, "output_base", DEFAULT_OUTPUT_BASE);
         xfce_rc_close(rc);
     } else {
         /* Something went wrong, apply default values. */
         calc->degrees = DEFAULT_DEGREES;
         calc->size = DEFAULT_SIZE;
         calc->hist_size = DEFAULT_HIST_SIZE;
+        calc->output_base = DEFAULT_OUTPUT_BASE;
     }
 }
 
@@ -146,7 +152,7 @@ static void entry_enter_cb(GtkEntry *entry, CalcPlugin *calc)
     input = gtk_entry_get_text(entry);
     parsetree = build_parse_tree(input, &err);
     if (err) {
-		xfce_dialog_show_error (NULL, NULL, "Calculator error: %s", err->message);
+        xfce_dialog_show_error (NULL, NULL, _("Calculator error: %s"), err->message);
         g_error_free(err);
         free_parsetree(parsetree);
         return;
@@ -161,7 +167,23 @@ static void entry_enter_cb(GtkEntry *entry, CalcPlugin *calc)
 
         r = eval_parse_tree(parsetree, calc->degrees);
 
-        output = g_strdup_printf("%.16g", r);
+        if(calc->output_base == 16) {
+#ifdef G_GINT64_MODIFIER
+            gint64 i = r;
+            output = g_strdup_printf("0x%" G_GINT64_MODIFIER "x", i);
+            // note that gdouble precision is less than gint64
+            // numbers higher then 2^53 are not exact! (same applies to negative numbers)
+#else
+            // Some platforms do not support printing 64-bit integers, even
+            // though the types are supported. On such platforms
+            // G_GINT64_MODIFIER is not defined.
+            gint32 i = r;
+            output = g_strdup_printf("0x%" G_GINT32_MODIFIER "x", i);
+#endif
+        }
+        else {
+            output = g_strdup_printf("%.16g", r);
+        }
         gtk_entry_set_text(entry, output);
         gtk_editable_set_position(GTK_EDITABLE(entry), -1);
         g_free(output);
@@ -205,7 +227,7 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
     gtk_widget_show(calc->hvbox);
     gtk_container_add(GTK_CONTAINER(calc->ebox), calc->hvbox);
 
-    icon = gtk_label_new(" Calc:");
+    icon = gtk_label_new(_(" Calc:"));
     gtk_widget_show(icon);
     gtk_box_pack_start(GTK_BOX(calc->hvbox), icon, FALSE, FALSE, 0);
 
@@ -330,6 +352,19 @@ static void angle_unit_chosen(GtkCheckMenuItem *button, CalcPlugin *calc)
     }
 }
 
+static void hexadecimal_output_chosen(GtkCheckMenuItem *button, CalcPlugin *calc)
+{
+    g_assert(button == (GtkCheckMenuItem *)calc->hexadecimal_button);
+
+    if (gtk_check_menu_item_get_active(button))
+        calc->output_base = 16;
+    else {
+        calc->output_base = 10;
+    }
+    // convert current value to new base
+    entry_enter_cb(GTK_ENTRY(GTK_COMBO(calc->combo)->entry), calc);
+}
+
 
 static void calc_dialog_response(GtkWidget *dialog, gint response,
                                  CalcPlugin *calc)
@@ -359,7 +394,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     xfce_panel_plugin_block_menu(plugin);
 
     toplevel = gtk_widget_get_toplevel(GTK_WIDGET(plugin)); 
-    dialog = xfce_titled_dialog_new_with_buttons("Calculator Plugin",
+    dialog = xfce_titled_dialog_new_with_buttons(_("Calculator Plugin"),
                        GTK_WINDOW(toplevel),
                        GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
                        GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
@@ -453,7 +488,7 @@ void calc_about (XfcePanelPlugin *plugin)
 static void calc_construct(XfcePanelPlugin *plugin)
 {
     CalcPlugin *calc;
-    GtkWidget *degrees, *radians;
+    GtkWidget *degrees, *radians, *hexadecimal;
 
     /* Make sure the comma sign (",") isn't treated as a decimal separator. */
     setlocale(LC_NUMERIC, "C");
@@ -490,10 +525,10 @@ static void calc_construct(XfcePanelPlugin *plugin)
     // Add controls for choosing angle unit to the menu.
     degrees = gtk_radio_menu_item_new_with_label(
                     NULL,
-                    "Trigonometrics use degrees");
+                    _("Trigonometrics use degrees"));
     radians = gtk_radio_menu_item_new_with_label(
                     gtk_radio_menu_item_get_group(GTK_RADIO_MENU_ITEM(degrees)),
-                    "Trigonometrics use radians");
+                    _("Trigonometrics use radians"));
 
     if (calc->degrees)
         gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(degrees), TRUE);
@@ -512,6 +547,21 @@ static void calc_construct(XfcePanelPlugin *plugin)
     xfce_panel_plugin_menu_insert_item(plugin, GTK_MENU_ITEM(degrees));
     xfce_panel_plugin_menu_insert_item(plugin, GTK_MENU_ITEM(radians));
 
+
+    // Add checkbox to enable hexadecimal output
+    hexadecimal = gtk_check_menu_item_new_with_label(_("Hexadecimal output"));
+
+    if (calc->output_base == 16)
+        gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(hexadecimal), TRUE);
+
+    g_signal_connect(G_OBJECT(hexadecimal), "toggled",
+                     G_CALLBACK(hexadecimal_output_chosen), calc);
+
+    gtk_widget_show(hexadecimal);
+    xfce_panel_plugin_menu_insert_item(plugin, GTK_MENU_ITEM(hexadecimal));
+
+
     calc->degrees_button = degrees;
     calc->radians_button = radians;
+    calc->hexadecimal_button = hexadecimal;
 }
