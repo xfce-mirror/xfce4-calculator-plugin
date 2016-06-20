@@ -103,6 +103,9 @@ static double eval(node_t *parsetree)
         case OP_DIV:
             r = left / right;
             break;
+        case OP_MODULO:
+            r = fmod(left, right);
+            break;
         case OP_POW:
             r = pow(left, right);
             break;
@@ -118,7 +121,7 @@ static double eval(node_t *parsetree)
         arg = eval(parsetree->right);
         r = parsetree->val.fun(arg);
         break;
-        
+
     default:
         g_assert_not_reached();
     }

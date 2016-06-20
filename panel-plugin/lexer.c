@@ -24,7 +24,7 @@
 
 static gboolean isoperator(int c)
 {
-    if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^')
+    if (c == '+' || c == '-' || c == '*' || c == '/' || c == '%' || c == '^')
         return TRUE;
     else
         return FALSE;

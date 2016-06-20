@@ -121,7 +121,7 @@ static gboolean is_mult_op(char op)
     /*
     return op[0] == '/' || (op[0] == '*' && op[1] == '\0')
     */
-    return op == '/' || op == '*';
+    return op == '/' || op == '*' || op == '%';
 }
 
 /*
@@ -388,8 +388,11 @@ static node_t *get_factortail(token_stack_t *stack, node_t *left_expr, GError **
     case '/':
         op->val.op = OP_DIV;
         break;
+    case '%':
+        op->val.op = OP_MODULO;
+        break;
     default:
-        set_error(err, "Expected '*' or '/'", token);
+        set_error(err, "Expected '*', '/' or '%'", token);
         g_free(op);
         return left_expr;
     }

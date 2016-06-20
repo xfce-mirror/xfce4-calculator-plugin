@@ -19,7 +19,7 @@ pow             ->      ( expr )  |  function ( expr )  |  constant |  NUM
 
 add_op          ->      +  |  -
 
-mult_op         ->      *  |  /
+mult_op         ->      *  |  /  |  %
 
 pow_op          ->      ^  |  **
 

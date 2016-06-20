@@ -6,6 +6,7 @@ EXTRA_DIST =								\
 TESTS = 								\
 	test-simple-expr.awk						\
 	test-minus.awk							\
+	test-modulo.awk							\
 	test-e-notation.awk						\
 	test-abs.awk							\
 	test-sqrt.awk							\
