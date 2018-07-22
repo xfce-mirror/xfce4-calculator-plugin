@@ -29,7 +29,6 @@
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
-#include <libxfce4panel/xfce-hvbox.h>
 #include "parsetree.h"
 #include "parser.h"
 #include "eval.h"
@@ -46,7 +45,7 @@ typedef struct {
     XfcePanelPlugin *plugin;
 
     GtkWidget *ebox;
-    GtkWidget *hvbox;
+    GtkWidget *box;
     GtkWidget *combo;
     GtkWidget *degrees_button;
     GtkWidget *radians_button;
@@ -61,10 +60,6 @@ typedef struct {
     gint output_base; // 10 = decimal, 16 = hexadecimal. Other values are not supported
 } CalcPlugin;
 
-
-static void calc_construct(XfcePanelPlugin *plugin);
-
-XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL(calc_construct);
 
 
 void calc_save_config(XfcePanelPlugin *plugin, CalcPlugin *calc)
@@ -148,6 +143,7 @@ static void entry_enter_cb(GtkEntry *entry, CalcPlugin *calc)
     node_t *parsetree;
     const gchar *input;
     GError *err = NULL;
+    GList *item;
 
     input = gtk_entry_get_text(entry);
     parsetree = build_parse_tree(input, &err);
@@ -159,7 +155,9 @@ static void entry_enter_cb(GtkEntry *entry, CalcPlugin *calc)
     }
 
     calc->expr_hist = add_to_expr_hist(calc->expr_hist, calc->hist_size, input);
-    gtk_combo_set_popdown_strings(GTK_COMBO(calc->combo), calc->expr_hist);
+    gtk_combo_box_text_remove_all (GTK_COMBO_BOX_TEXT(calc->combo));
+    for (item = calc->expr_hist; item != NULL; item = item->next)
+        gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT(calc->combo), item->data);
 
     if (parsetree) {
         gdouble r;
@@ -200,7 +198,7 @@ static gboolean entry_buttonpress_cb(GtkWidget *entry, GdkEventButton *event,
 
     toplevel = gtk_widget_get_toplevel(entry);
 
-    if (event->button != 3 && toplevel && toplevel->window)
+    if (event->button != 3 && toplevel && gtk_widget_get_window(toplevel))
         xfce_panel_plugin_focus_widget(calc->plugin, entry);
 
     return FALSE;
@@ -211,8 +209,7 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
 {
     CalcPlugin *calc;
     GtkOrientation orientation;
-    GtkWidget *icon;
-    GtkWidget *combo;
+    GtkWidget *icon, *combo, *entry;
 
     calc = panel_slice_new0(CalcPlugin);
     calc->plugin = plugin;
@@ -223,28 +220,28 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
     calc->ebox = gtk_event_box_new();
     gtk_widget_show(calc->ebox);
 
-    calc->hvbox = xfce_hvbox_new(orientation, FALSE, 2);
-    gtk_widget_show(calc->hvbox);
-    gtk_container_add(GTK_CONTAINER(calc->ebox), calc->hvbox);
+    calc->box = gtk_box_new(orientation, 2);
+    gtk_widget_show(calc->box);
+    gtk_container_add(GTK_CONTAINER(calc->ebox), calc->box);
 
     icon = gtk_label_new(_(" Calc:"));
     gtk_widget_show(icon);
-    gtk_box_pack_start(GTK_BOX(calc->hvbox), icon, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(calc->box), icon, FALSE, FALSE, 0);
 
-    combo = gtk_combo_new();
-    gtk_entry_set_max_length(GTK_ENTRY(GTK_COMBO(combo)->entry), 50);
-    gtk_combo_set_use_arrows_always(GTK_COMBO(combo), TRUE);
-    g_signal_connect(G_OBJECT(GTK_COMBO(combo)->entry), "activate",
-                     G_CALLBACK(entry_enter_cb), (gpointer)calc);
-    g_signal_connect(G_OBJECT(GTK_COMBO(combo)->entry), "button-press-event",
-                     G_CALLBACK(entry_buttonpress_cb), (gpointer)calc);
+    combo = gtk_combo_box_text_new_with_entry();
+    entry = gtk_bin_get_child(GTK_BIN(combo));
+    g_signal_connect(G_OBJECT(entry), "activate",
+                     G_CALLBACK(entry_enter_cb), (gpointer) calc);
+    g_signal_connect(G_OBJECT(entry), "button-press-event",
+                     G_CALLBACK(entry_buttonpress_cb), (gpointer) calc);
     gtk_widget_show(combo);
-    gtk_box_pack_start(GTK_BOX(calc->hvbox), combo, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(calc->box), combo, FALSE, FALSE, 0);
     calc->combo = combo;
 
     calc->expr_hist = NULL;
 
-    gtk_entry_set_width_chars(GTK_ENTRY(GTK_COMBO(combo)->entry), calc->size);
+    gtk_entry_set_max_length(GTK_ENTRY(entry), 50);
+    gtk_entry_set_width_chars(GTK_ENTRY(entry), calc->size);
 
     return calc;
 }
@@ -267,7 +264,7 @@ static void calc_free(XfcePanelPlugin *plugin, CalcPlugin *calc)
         gtk_widget_destroy(dialog);
 
     gtk_widget_destroy(calc->ebox);
-    gtk_widget_destroy(calc->hvbox);
+    gtk_widget_destroy(calc->box);
     gtk_widget_destroy(calc->combo);
 
     g_list_foreach(calc->expr_hist, (GFunc)free_stuff, NULL);
@@ -286,7 +283,7 @@ static void calc_orientation_changed(XfcePanelPlugin *plugin,
                                      GtkOrientation orientation,
                                      CalcPlugin *calc)
 {
-    xfce_hvbox_set_orientation(XFCE_HVBOX(calc->hvbox), orientation);
+    gtk_orientable_set_orientation(GTK_ORIENTABLE(calc->box), orientation);
 }
 
 
@@ -313,7 +310,10 @@ static gboolean calc_plugin_update_size(XfcePanelPlugin *plugin, gint size,
 	g_assert(calc->combo);
 
 	calc->size = size;
-	gtk_entry_set_width_chars(GTK_ENTRY(GTK_COMBO(calc->combo)->entry), size);
+
+	GtkWidget *entry = gtk_bin_get_child (GTK_BIN (calc->combo));
+	gtk_entry_set_width_chars(GTK_ENTRY(entry), size);
+
 	return TRUE;
 }
 
@@ -362,7 +362,8 @@ static void hexadecimal_output_chosen(GtkCheckMenuItem *button, CalcPlugin *calc
         calc->output_base = 10;
     }
     // convert current value to new base
-    entry_enter_cb(GTK_ENTRY(GTK_COMBO(calc->combo)->entry), calc);
+    GtkWidget *entry = gtk_bin_get_child (GTK_BIN (calc->combo));
+    entry_enter_cb(GTK_ENTRY(entry), calc);
 }
 
 
@@ -374,8 +375,7 @@ static void calc_dialog_response(GtkWidget *dialog, gint response,
         xfce_panel_plugin_unblock_menu(calc->plugin);
         calc_save_config(calc->plugin, calc);
         gtk_widget_destroy(dialog);
-    } else
-        g_assert_not_reached();
+    }
 }
 
 
@@ -384,20 +384,21 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     GtkWidget *dialog;
     GtkWidget *toplevel;
 
+    GtkWidget *area;
     GtkWidget *frame;
     GtkWidget *bin;
     GtkWidget *hbox;
     GtkWidget *size_label;
     GtkWidget *size_spin;
-    GtkObject *adjustment;
+    GtkAdjustment *adjustment;
 
     xfce_panel_plugin_block_menu(plugin);
 
     toplevel = gtk_widget_get_toplevel(GTK_WIDGET(plugin)); 
     dialog = xfce_titled_dialog_new_with_buttons(_("Calculator Plugin"),
                        GTK_WINDOW(toplevel),
-                       GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
-                       GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
+                       GTK_DIALOG_DESTROY_WITH_PARENT,
+                       _("_Close"), GTK_RESPONSE_OK, NULL);
 
     gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_CENTER);
     gtk_window_set_icon_name(GTK_WINDOW(dialog), "xfce4-calculator-plugin");
@@ -409,14 +410,15 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     g_signal_connect(G_OBJECT(dialog), "response",
                      G_CALLBACK(calc_dialog_response), calc);
 
+	area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
 
 	frame = xfce_gtk_frame_box_new (_("Appearance"), &bin);
 
 	gtk_container_set_border_width(GTK_CONTAINER(frame), 6);
-	gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), frame, TRUE, TRUE, 0);
+	gtk_box_pack_start(GTK_BOX(area), frame, TRUE, TRUE, 0);
 	gtk_widget_show(frame);
 
-	hbox = gtk_hbox_new(FALSE, 8);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_container_add(GTK_CONTAINER (bin), hbox);
 	gtk_widget_show(hbox);
 
@@ -432,14 +434,13 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
 	g_signal_connect(size_spin, "value-changed",
                      G_CALLBACK(calc_plugin_size_changed), calc);
 
-
     frame = xfce_gtk_frame_box_new (_("History"), &bin);
 
     gtk_container_set_border_width(GTK_CONTAINER (frame), 6);
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), frame, TRUE, TRUE, 0);
+    gtk_box_pack_start(GTK_BOX(area), frame, TRUE, TRUE, 0);
     gtk_widget_show (frame);
 
-    hbox = gtk_hbox_new(FALSE, 8);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
     gtk_container_add(GTK_CONTAINER(bin), hbox);
     gtk_widget_show(hbox);
 
@@ -453,9 +454,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     g_signal_connect(size_spin, "value-changed",
                      G_CALLBACK(calc_hist_size_changed), calc);
 
-
     gtk_widget_show(dialog);
-
 }
 
 void calc_about (XfcePanelPlugin *plugin)
@@ -480,8 +479,6 @@ void calc_about (XfcePanelPlugin *plugin)
       g_object_unref(G_OBJECT(icon));
 
 }
-
-
 
 
 
@@ -547,7 +544,6 @@ static void calc_construct(XfcePanelPlugin *plugin)
     xfce_panel_plugin_menu_insert_item(plugin, GTK_MENU_ITEM(degrees));
     xfce_panel_plugin_menu_insert_item(plugin, GTK_MENU_ITEM(radians));
 
-
     // Add checkbox to enable hexadecimal output
     hexadecimal = gtk_check_menu_item_new_with_label(_("Hexadecimal output"));
 
@@ -565,3 +561,5 @@ static void calc_construct(XfcePanelPlugin *plugin)
     calc->radians_button = radians;
     calc->hexadecimal_button = hexadecimal;
 }
+
+XFCE_PANEL_PLUGIN_REGISTER(calc_construct);
