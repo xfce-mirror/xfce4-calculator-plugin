@@ -1,4 +1,4 @@
-# $Id$
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS =								\
 	icons								\
@@ -26,7 +26,7 @@ EXTRA_DIST =								\
 	intltool-extract.in						\
 	intltool-merge.in						\
 	intltool-update.in						\
-	configure.in.in 						\
+	configure.ac.in 						\
 	TODO
 
 DISTCLEANFILES =							\
