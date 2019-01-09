@@ -234,6 +234,7 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
                      G_CALLBACK(entry_enter_cb), (gpointer) calc);
     g_signal_connect(G_OBJECT(entry), "button-press-event",
                      G_CALLBACK(entry_buttonpress_cb), (gpointer) calc);
+    gtk_widget_set_valign(combo, GTK_ALIGN_CENTER);
     gtk_widget_show(combo);
     gtk_box_pack_start(GTK_BOX(calc->box), combo, FALSE, FALSE, 0);
     calc->combo = combo;
