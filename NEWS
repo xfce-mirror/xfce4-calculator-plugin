@@ -1,0 +1,8 @@
+0.6.90
+=====
+- GTK3 Port
+- Bump to minimal Gtk to 3.22
+- Added option for hexadecimal output (Bug #12548)
+- Added modulo (%) operator (Bug #12548)
+- Added more tests (Bug #12548)
+- Updated FSF address (Bug #12543)
