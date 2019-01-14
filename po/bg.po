@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Georgi Georgiev <georgiev_1994@abv.bg>, 2019
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-14 13:46+0100\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2019\n"
+"Language-Team: Bulgarian (https://www.transifex.com/xfce/teams/16840/bg/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/calculator.c:151
+#, c-format
+msgid "Calculator error: %s"
+msgstr "Грешка при калкулиране: %s"
+
+#: ../panel-plugin/calculator.c:227
+msgid " Calc:"
+msgstr "Калк:"
+
+#: ../panel-plugin/calculator.c:399
+msgid "Calculator Plugin"
+msgstr "Добавка Калкулатор"
+
+#: ../panel-plugin/calculator.c:402
+msgid "_Close"
+msgstr "Затваряне"
+
+#: ../panel-plugin/calculator.c:416
+msgid "Appearance"
+msgstr "Външен вид"
+
+#: ../panel-plugin/calculator.c:426
+msgid "Width (in chars):"
+msgstr "Ширина (в символи):"
+
+#: ../panel-plugin/calculator.c:438
+msgid "History"
+msgstr "История"
+
+#: ../panel-plugin/calculator.c:448
+msgid "Size:"
+msgstr "Размер:"
+
+#: ../panel-plugin/calculator.c:474
+msgid "Calculator for Xfce panel"
+msgstr "Калкулатор за панела на Xfce"
+
+#: ../panel-plugin/calculator.c:476
+msgid "Copyright (c) 2003-2016\n"
+msgstr "Авторски права (c) 2003-2016\n"
+
+#: ../panel-plugin/calculator.c:526
+msgid "Trigonometrics use degrees"
+msgstr "Използване на градуси за тригонометрията"
+
+#: ../panel-plugin/calculator.c:529
+msgid "Trigonometrics use radians"
+msgstr "Използване на радиани за тригонометрията"
+
+#. Add checkbox to enable hexadecimal output
+#: ../panel-plugin/calculator.c:549
+msgid "Hexadecimal output"
+msgstr "Шестнадесетичен изход"
+
+#: ../panel-plugin/calculator.desktop.in.h:1
+msgid "Calculator"
+msgstr "Калкулатор"
+
+#: ../panel-plugin/calculator.desktop.in.h:2
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Добавка Калкулатор за панела на Xfce"
