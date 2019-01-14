@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nick Schermer <nick@xfce.org>, 2019
+# Chris Darnell <chris@cedeel.com>, 2019
+# scootergrisen, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-14 13:46+0100\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: scootergrisen, 2019\n"
+"Language-Team: Danish (https://www.transifex.com/xfce/teams/16840/da/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/calculator.c:151
+#, c-format
+msgid "Calculator error: %s"
+msgstr "Fejl ved lommeregner: %s"
+
+#: ../panel-plugin/calculator.c:227
+msgid " Calc:"
+msgstr "Udregn:"
+
+#: ../panel-plugin/calculator.c:399
+msgid "Calculator Plugin"
+msgstr "Lommeregner-plugin"
+
+#: ../panel-plugin/calculator.c:402
+msgid "_Close"
+msgstr "_Luk"
+
+#: ../panel-plugin/calculator.c:416
+msgid "Appearance"
+msgstr "Udseende"
+
+#: ../panel-plugin/calculator.c:426
+msgid "Width (in chars):"
+msgstr "Bredde (i tegn):"
+
+#: ../panel-plugin/calculator.c:438
+msgid "History"
+msgstr "Historik"
+
+#: ../panel-plugin/calculator.c:448
+msgid "Size:"
+msgstr "Størrelse:"
+
+#: ../panel-plugin/calculator.c:474
+msgid "Calculator for Xfce panel"
+msgstr "Lommeregner til Xfce-panelet"
+
+#: ../panel-plugin/calculator.c:476
+msgid "Copyright (c) 2003-2016\n"
+msgstr "Ophavsret (c) 2003-2016\n"
+
+#: ../panel-plugin/calculator.c:526
+msgid "Trigonometrics use degrees"
+msgstr "Trigonometri bruger grader"
+
+#: ../panel-plugin/calculator.c:529
+msgid "Trigonometrics use radians"
+msgstr "Trigonometri bruger radianer"
+
+#. Add checkbox to enable hexadecimal output
+#: ../panel-plugin/calculator.c:549
+msgid "Hexadecimal output"
+msgstr "Hexadecimal output"
+
+#: ../panel-plugin/calculator.desktop.in.h:1
+msgid "Calculator"
+msgstr "Lommeregner"
+
+#: ../panel-plugin/calculator.desktop.in.h:2
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Lommeregner-plugin til Xfce-panelet"
