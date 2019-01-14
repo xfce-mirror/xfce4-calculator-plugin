@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nick Schermer <nick@xfce.org>, 2019
+# Davidmp <medipas@gmail.com>, 2019
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-14 13:46+0100\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
+"Language-Team: Catalan (https://www.transifex.com/xfce/teams/16840/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/calculator.c:151
+#, c-format
+msgid "Calculator error: %s"
+msgstr "Error de la calculadora: %s"
+
+#: ../panel-plugin/calculator.c:227
+msgid " Calc:"
+msgstr "Càlcul:"
+
+#: ../panel-plugin/calculator.c:399
+msgid "Calculator Plugin"
+msgstr "Connector de calculadora"
+
+#: ../panel-plugin/calculator.c:402
+msgid "_Close"
+msgstr "Tan_ca"
+
+#: ../panel-plugin/calculator.c:416
+msgid "Appearance"
+msgstr "Aparença"
+
+#: ../panel-plugin/calculator.c:426
+msgid "Width (in chars):"
+msgstr "Amplada (en caràcters):"
+
+#: ../panel-plugin/calculator.c:438
+msgid "History"
+msgstr "Historial"
+
+#: ../panel-plugin/calculator.c:448
+msgid "Size:"
+msgstr "Mida:"
+
+#: ../panel-plugin/calculator.c:474
+msgid "Calculator for Xfce panel"
+msgstr "Calculadora per al tauler d'Xfce"
+
+#: ../panel-plugin/calculator.c:476
+msgid "Copyright (c) 2003-2016\n"
+msgstr "Drets d'autor (c) 2003-2016\n"
+
+#: ../panel-plugin/calculator.c:526
+msgid "Trigonometrics use degrees"
+msgstr "Trigonometria utilitza graus"
+
+#: ../panel-plugin/calculator.c:529
+msgid "Trigonometrics use radians"
+msgstr "Trigonometria utilitza radians"
+
+#. Add checkbox to enable hexadecimal output
+#: ../panel-plugin/calculator.c:549
+msgid "Hexadecimal output"
+msgstr "Sortida hexadecimal"
+
+#: ../panel-plugin/calculator.desktop.in.h:1
+msgid "Calculator"
+msgstr "Calculadora"
+
+#: ../panel-plugin/calculator.desktop.in.h:2
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Connector de calculadora per al tauler d'Xfce"
