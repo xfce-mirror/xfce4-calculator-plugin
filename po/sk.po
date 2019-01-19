@@ -6,8 +6,8 @@
 # Translators:
 # Dušan Kazik <prescott66@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2019
-# Slavko <linux@slavino.sk>, 2019
 # Jose Riha <jose1711@gmail.com>, 2019
+# Slavko <linux@slavino.sk>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-14 18:35+0100\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Jose Riha <jose1711@gmail.com>, 2019\n"
+"Last-Translator: Slavko <linux@slavino.sk>, 2019\n"
 "Language-Team: Slovak (https://www.transifex.com/xfce/teams/16840/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Chyba pluginu Kalkulačka: %s"
 
 #: ../panel-plugin/calculator.c:227
 msgid " Calc:"
-msgstr ""
+msgstr "Vypočítať:"
 
 #: ../panel-plugin/calculator.c:399
 msgid "Calculator Plugin"
