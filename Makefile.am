@@ -2,14 +2,14 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS =								\
 	icons								\
-	panel-plugin 							\
+	panel-plugin 						\
 	tests								\
 	po
 
 distclean-local:
 	rm -rf *.cache *~
 
-distuninstallcheck_listfiles =                                          \ 
+distuninstallcheck_listfiles =											\
 	find . -type f -print | grep -v ./share/icons/hicolor/icon-theme.cache
 
 .PHONY: ChangeLog
