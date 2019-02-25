@@ -66,11 +66,11 @@ msgstr "Copyright (c) 2003-2019\n"
 
 #: ../panel-plugin/calculator.c:526
 msgid "Trigonometrics use degrees"
-msgstr ""
+msgstr "度を使用する三角法"
 
 #: ../panel-plugin/calculator.c:529
 msgid "Trigonometrics use radians"
-msgstr ""
+msgstr "ラジアンを使用する三角法"
 
 #. Add checkbox to enable hexadecimal output
 #: ../panel-plugin/calculator.c:549
