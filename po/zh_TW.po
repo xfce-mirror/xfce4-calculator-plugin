@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
-# Jeff Huang <s8321414@gmail.com>, 2019
 # Hsiu-Ming Chang <cges30901@gmail.com>, 2019
+# Jeff Huang <s8321414@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-calculator-plugin\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 13:46+0100\n"
+"POT-Creation-Date: 2019-01-14 18:35+0100\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>, 2019\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>, 2019\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/xfce/teams/16840/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,11 +58,11 @@ msgstr "大小："
 
 #: ../panel-plugin/calculator.c:474
 msgid "Calculator for Xfce panel"
-msgstr "Xfce 面板的計算機插件"
+msgstr "Xfce 面板的計算機"
 
 #: ../panel-plugin/calculator.c:476
-msgid "Copyright (c) 2003-2016\n"
-msgstr "Copyright (c) 2003-2016\n"
+msgid "Copyright (c) 2003-2019\n"
+msgstr "Copyright (c) 2003-2019\n"
 
 #: ../panel-plugin/calculator.c:526
 msgid "Trigonometrics use degrees"
