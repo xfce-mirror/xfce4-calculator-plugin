@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ольга Смирнова, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-14 18:35+0100\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Ольга Смирнова, 2019\n"
+"Language-Team: Interlingue (https://www.transifex.com/xfce/teams/16840/ie/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ie\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/calculator.c:151
+#, c-format
+msgid "Calculator error: %s"
+msgstr "Errore de calculator: %s"
+
+#: ../panel-plugin/calculator.c:227
+msgid " Calc:"
+msgstr "Calc:"
+
+#: ../panel-plugin/calculator.c:399
+msgid "Calculator Plugin"
+msgstr "Plugin de calculator"
+
+#: ../panel-plugin/calculator.c:402
+msgid "_Close"
+msgstr "_Cluder"
+
+#: ../panel-plugin/calculator.c:416
+msgid "Appearance"
+msgstr "Aspecte"
+
+#: ../panel-plugin/calculator.c:426
+msgid "Width (in chars):"
+msgstr "Largore (in caracters):"
+
+#: ../panel-plugin/calculator.c:438
+msgid "History"
+msgstr "Diarium"
+
+#: ../panel-plugin/calculator.c:448
+msgid "Size:"
+msgstr "Dimension:"
+
+#: ../panel-plugin/calculator.c:474
+msgid "Calculator for Xfce panel"
+msgstr "Un calculator por li panel Xfce"
+
+#: ../panel-plugin/calculator.c:476
+msgid "Copyright (c) 2003-2019\n"
+msgstr "Copyright (c) 2003-2019\n"
+
+#: ../panel-plugin/calculator.c:526
+msgid "Trigonometrics use degrees"
+msgstr "Trigonometrie usa gradus"
+
+#: ../panel-plugin/calculator.c:529
+msgid "Trigonometrics use radians"
+msgstr "Trigonometrie usa radianes"
+
+#. Add checkbox to enable hexadecimal output
+#: ../panel-plugin/calculator.c:549
+msgid "Hexadecimal output"
+msgstr "Resultate hexadecimal"
+
+#: ../panel-plugin/calculator.desktop.in.h:1
+msgid "Calculator"
+msgstr "Calculator"
+
+#: ../panel-plugin/calculator.desktop.in.h:2
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Plugin de calculator por li panel Xfce"
