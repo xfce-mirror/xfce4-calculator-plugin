@@ -243,6 +243,9 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
 
     gtk_entry_set_max_length(GTK_ENTRY(entry), 50);
     gtk_entry_set_width_chars(GTK_ENTRY(entry), calc->size);
+#if GTK_CHECK_VERSION (3, 22, 20)
+    gtk_entry_set_input_hints (GTK_ENTRY(entry), GTK_INPUT_HINT_NO_EMOJI);
+#endif
 
     return calc;
 }
