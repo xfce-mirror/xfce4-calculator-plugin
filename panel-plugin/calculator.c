@@ -28,7 +28,7 @@
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
-#include <libxfce4panel/xfce-panel-plugin.h>
+#include <libxfce4panel/libxfce4panel.h>
 #include "parsetree.h"
 #include "parser.h"
 #include "eval.h"
@@ -211,7 +211,7 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
     GtkOrientation orientation;
     GtkWidget *icon, *combo, *entry;
 
-    calc = panel_slice_new0(CalcPlugin);
+    calc = g_slice_new0(CalcPlugin);
     calc->plugin = plugin;
     calc_read_config(calc);
 
@@ -279,7 +279,7 @@ static void calc_free(XfcePanelPlugin *plugin, CalcPlugin *calc)
      * freeing of expr_hist enough?
      */
 
-    panel_slice_free(CalcPlugin, calc);
+    g_slice_free(CalcPlugin, calc);
 }
 
 
