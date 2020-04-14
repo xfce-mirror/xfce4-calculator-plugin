@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
-# Jeff Huang <s8321414@gmail.com>, 2019
+# 黃柏諺 <s8321414@gmail.com>, 2019
 # Hsiu-Ming Chang <cges30901@gmail.com>, 2019
 # 
 #, fuzzy
