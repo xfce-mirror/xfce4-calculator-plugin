@@ -1,14 +1,14 @@
-[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/xfce4-calculator-plugin/COPYING)
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin/-/blob/master/COPYING)
 
 # xfce4-calculator-plugin
 
-xfce4-calculator-plugin is a calculator plugin for the Xfce4 panel.
+Xfce4-calculator-plugin is a calculator plugin for the Xfce4 panel.
 
 ----
 
 ### Homepage
 
-[xfce4-calculator-plugin documentation](https://docs.xfce.org/panel-plugins/xfce4-calculator-plugin)
+[Xfce4-calculator-plugin documentation](https://docs.xfce.org/panel-plugins/xfce4-calculator-plugin)
 
 ### Changelog
 
@@ -16,13 +16,13 @@ See [NEWS](https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin/-/blob/
 
 ### Source Code Repository
 
-[xfce4-calculator-plugin source code](https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin)
+[Xfce4-calculator-plugin source code](https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin)
 
-### Download A Release Tarball
+### Download a Release Tarball
 
-[xfce4-calculator-plugin archive](https://archive.xfce.org/src/panel-plugins/xfce4-calculator-plugin)
+[Xfce4-calculator-plugin archive](https://archive.xfce.org/src/panel-plugins/xfce4-calculator-plugin)
     or
-[xfce4-calculator-plugin tags](https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin/-/tags)
+[Xfce4-calculator-plugin tags](https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin/-/tags)
 
 ### Installation
 
