@@ -30,6 +30,7 @@ EXTRA_DIST =								\
 	intltool-merge.in						\
 	intltool-update.in						\
 	configure.ac.in 						\
+	README.md								\
 	TODO
 
 DISTCLEANFILES =							\
