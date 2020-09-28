@@ -374,7 +374,7 @@ static void hexadecimal_output_chosen(GtkCheckMenuItem *button, CalcPlugin *calc
 static void calc_dialog_response(GtkWidget *dialog, gint response,
                                  CalcPlugin *calc)
 {
-    if (response == GTK_RESPONSE_OK) {
+    if (response == GTK_RESPONSE_OK || response == GTK_RESPONSE_DELETE_EVENT) {
         g_object_set_data(G_OBJECT(calc->plugin), "dialog", NULL);
         xfce_panel_plugin_unblock_menu(calc->plugin);
         calc_save_config(calc->plugin, calc);
