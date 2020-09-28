@@ -37,7 +37,7 @@ panel-plugin/.libs/
 panel-plugin/calculator.desktop
 panel-plugin/xfce4-calculator-plugin
 po/*.gmo
-po/.intltool-merge-cache
+po/.intltool-merge-cache*
 po/Makefile.in.in
 po/POTFILES
 po/stamp-it
