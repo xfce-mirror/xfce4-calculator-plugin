@@ -38,6 +38,7 @@
 #define DEFAULT_DEGREES FALSE
 #define DEFAULT_SIZE 20
 #define DEFAULT_HIST_SIZE 25
+#define DEFAULT_MOVE_CURSOR FALSE
 #define DEFAULT_OUTPUT_BASE 10
 
 
@@ -57,6 +58,7 @@ typedef struct {
     gboolean degrees; // Degrees or radians for trigonometric functions?
     gint size;		  // Size of comboboxentry 
     gint hist_size;
+    gboolean move_cursor;
     gint output_base; // 10 = decimal, 16 = hexadecimal. Other values are not supported
 } CalcPlugin;
 
@@ -77,6 +79,7 @@ void calc_save_config(XfcePanelPlugin *plugin, CalcPlugin *calc)
         xfce_rc_write_bool_entry(rc, "degrees", calc->degrees);
         xfce_rc_write_int_entry(rc, "size", calc->size);
         xfce_rc_write_int_entry(rc, "hist_size", calc->hist_size);
+        xfce_rc_write_int_entry(rc, "move_cursor", calc->move_cursor);
         xfce_rc_write_int_entry(rc, "output_base", calc->output_base);
         xfce_rc_close(rc);
     }
@@ -100,6 +103,7 @@ static void calc_read_config(CalcPlugin *calc)
         calc->degrees = xfce_rc_read_bool_entry(rc, "degrees", DEFAULT_DEGREES);
         calc->size = xfce_rc_read_int_entry(rc, "size", DEFAULT_SIZE);
         calc->hist_size = xfce_rc_read_int_entry(rc, "hist_size", DEFAULT_HIST_SIZE);
+        calc->move_cursor = xfce_rc_read_int_entry(rc, "move_cursor", DEFAULT_MOVE_CURSOR);
         calc->output_base = xfce_rc_read_int_entry(rc, "output_base", DEFAULT_OUTPUT_BASE);
         xfce_rc_close(rc);
     } else {
@@ -107,6 +111,7 @@ static void calc_read_config(CalcPlugin *calc)
         calc->degrees = DEFAULT_DEGREES;
         calc->size = DEFAULT_SIZE;
         calc->hist_size = DEFAULT_HIST_SIZE;
+        calc->move_cursor = DEFAULT_MOVE_CURSOR;
         calc->output_base = DEFAULT_OUTPUT_BASE;
     }
 }
@@ -183,7 +188,8 @@ static void entry_enter_cb(GtkEntry *entry, CalcPlugin *calc)
             output = g_strdup_printf("%.16g", r);
         }
         gtk_entry_set_text(entry, output);
-        gtk_editable_set_position(GTK_EDITABLE(entry), -1);
+        if(calc->move_cursor)
+            gtk_editable_set_position(GTK_EDITABLE(entry), -1);
         g_free(output);
         free_parsetree(parsetree);
     }
@@ -336,6 +342,13 @@ static void calc_hist_size_changed(GtkSpinButton *spin, CalcPlugin *calc)
 }
 
 
+static void calc_move_cursor_changed(GtkToggleButton *button, CalcPlugin *calc)
+{
+    g_assert(calc);
+    calc->move_cursor = !gtk_toggle_button_get_active(button);
+}
+
+
 /* Called when the "trigonometrics use degree/radians" menu items change state.
 
    Note that since they are radio buttons, grouped together, they will allways
@@ -465,6 +478,20 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     gtk_widget_show (size_spin);
     g_signal_connect(size_spin, "value-changed",
                      G_CALLBACK(calc_hist_size_changed), calc);
+
+    /* Behavior */
+    frame = xfce_gtk_frame_box_new (_("Behavior"), &bin);
+
+    gtk_container_set_border_width(GTK_CONTAINER (frame), 6);
+    gtk_box_pack_start(GTK_BOX(area), frame, TRUE, TRUE, 0);
+    gtk_widget_show(frame);
+
+    button = gtk_check_button_new_with_label(_("Do not move cursor after calculation"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button), !calc->move_cursor);
+    gtk_container_add(GTK_CONTAINER(bin), button);
+    gtk_widget_show(button);
+    g_signal_connect(button, "toggled",
+                     G_CALLBACK(calc_move_cursor_changed), calc);
 
     /* add the "Close" button */
     button = gtk_button_new_with_mnemonic (_("_Close"));
