@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
-# 黃柏諺 <s8321414@gmail.com>, 2019
-# Hsiu-Ming Chang <cges30901@gmail.com>, 2019
+# Hsiu-Ming Chang <cges30901@gmail.com>, 2020
+# 黃柏諺 <s8321414@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 18:35+0100\n"
+"POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>, 2019\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/xfce/teams/16840/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,57 +23,69 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/calculator.c:151
+#: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
 msgstr "計算機錯誤：%s"
 
-#: ../panel-plugin/calculator.c:227
+#: ../panel-plugin/calculator.c:233
 msgid " Calc:"
 msgstr "計算機："
 
-#: ../panel-plugin/calculator.c:399
+#: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
 msgstr "計算機插件"
 
-#: ../panel-plugin/calculator.c:402
+#. add the "Close" button
+#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
 msgid "_Close"
 msgstr "關閉(_C)"
 
-#: ../panel-plugin/calculator.c:416
+#. Appearance
+#: ../panel-plugin/calculator.c:439
 msgid "Appearance"
 msgstr "外觀"
 
-#: ../panel-plugin/calculator.c:426
+#: ../panel-plugin/calculator.c:449
 msgid "Width (in chars):"
 msgstr "寬度 (多少字元):"
 
-#: ../panel-plugin/calculator.c:438
+#. History
+#: ../panel-plugin/calculator.c:462
 msgid "History"
 msgstr "歷史"
 
-#: ../panel-plugin/calculator.c:448
+#: ../panel-plugin/calculator.c:472
 msgid "Size:"
 msgstr "大小："
 
-#: ../panel-plugin/calculator.c:474
+#. Behavior
+#: ../panel-plugin/calculator.c:483
+msgid "Behavior"
+msgstr "行為"
+
+#: ../panel-plugin/calculator.c:489
+msgid "Do not move cursor after calculation"
+msgstr "不要在計算後移動游標"
+
+#: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
 msgstr "Xfce 面板的計算機"
 
-#: ../panel-plugin/calculator.c:476
+#: ../panel-plugin/calculator.c:525
 msgid "Copyright (c) 2003-2019\n"
 msgstr "Copyright (c) 2003-2019\n"
 
-#: ../panel-plugin/calculator.c:526
+#: ../panel-plugin/calculator.c:575
 msgid "Trigonometrics use degrees"
 msgstr "三角函數使用角度"
 
-#: ../panel-plugin/calculator.c:529
+#: ../panel-plugin/calculator.c:578
 msgid "Trigonometrics use radians"
 msgstr "三角函數使用弧度"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:549
+#: ../panel-plugin/calculator.c:598
 msgid "Hexadecimal output"
 msgstr "十六進位輸出"
 
