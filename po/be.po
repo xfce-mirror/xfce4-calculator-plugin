@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 18:35+0100\n"
+"POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Zmicer Turok <nashtlumach@gmail.com>, 2020\n"
 "Language-Team: Belarusian (https://www.transifex.com/xfce/teams/16840/be/)\n"
@@ -21,57 +21,69 @@ msgstr ""
 "Language: be\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../panel-plugin/calculator.c:151
+#: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
 msgstr "Памылка: %s"
 
-#: ../panel-plugin/calculator.c:227
+#: ../panel-plugin/calculator.c:233
 msgid " Calc:"
 msgstr "Падлік: "
 
-#: ../panel-plugin/calculator.c:399
+#: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
 msgstr "Убудова калькулятара"
 
-#: ../panel-plugin/calculator.c:402
+#. add the "Close" button
+#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
 msgid "_Close"
 msgstr "_Закрыць"
 
-#: ../panel-plugin/calculator.c:416
+#. Appearance
+#: ../panel-plugin/calculator.c:439
 msgid "Appearance"
 msgstr "Выгляд"
 
-#: ../panel-plugin/calculator.c:426
+#: ../panel-plugin/calculator.c:449
 msgid "Width (in chars):"
 msgstr "Шырыня (у сімвалах):"
 
-#: ../panel-plugin/calculator.c:438
+#. History
+#: ../panel-plugin/calculator.c:462
 msgid "History"
 msgstr "Гісторыя"
 
-#: ../panel-plugin/calculator.c:448
+#: ../panel-plugin/calculator.c:472
 msgid "Size:"
 msgstr "Памер:"
 
-#: ../panel-plugin/calculator.c:474
+#. Behavior
+#: ../panel-plugin/calculator.c:483
+msgid "Behavior"
+msgstr "Паводзіны"
+
+#: ../panel-plugin/calculator.c:489
+msgid "Do not move cursor after calculation"
+msgstr "Не перамяшчаць курсор пасля падліку"
+
+#: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
 msgstr "Калькулятар для панэлі Xfce"
 
-#: ../panel-plugin/calculator.c:476
+#: ../panel-plugin/calculator.c:525
 msgid "Copyright (c) 2003-2019\n"
 msgstr "Copyright (c) 2003-2019\n"
 
-#: ../panel-plugin/calculator.c:526
+#: ../panel-plugin/calculator.c:575
 msgid "Trigonometrics use degrees"
 msgstr "У трыганаметрыі выкарыстоўваюцца градусы"
 
-#: ../panel-plugin/calculator.c:529
+#: ../panel-plugin/calculator.c:578
 msgid "Trigonometrics use radians"
 msgstr "У трыганаметрыі выкарыстоўваюцца радыяны"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:549
+#: ../panel-plugin/calculator.c:598
 msgid "Hexadecimal output"
 msgstr "Шаснаццатковы вывад"
 
