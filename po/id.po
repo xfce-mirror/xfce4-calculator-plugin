@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2019
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020
 # Triyan W. Nugroho <triyan.wn@gmail.com>, 2020
 # 
 #, fuzzy
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 18:35+0100\n"
+"POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/xfce/teams/16840/id/)\n"
@@ -23,57 +23,69 @@ msgstr ""
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/calculator.c:151
+#: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
 msgstr "Galat kalkulator: %s"
 
-#: ../panel-plugin/calculator.c:227
+#: ../panel-plugin/calculator.c:233
 msgid " Calc:"
-msgstr ""
+msgstr " Calc:"
 
-#: ../panel-plugin/calculator.c:399
+#: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
 msgstr "Plugin Kalkulator"
 
-#: ../panel-plugin/calculator.c:402
+#. add the "Close" button
+#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
 msgid "_Close"
 msgstr "_Tutup"
 
-#: ../panel-plugin/calculator.c:416
+#. Appearance
+#: ../panel-plugin/calculator.c:439
 msgid "Appearance"
 msgstr "Penampilan"
 
-#: ../panel-plugin/calculator.c:426
+#: ../panel-plugin/calculator.c:449
 msgid "Width (in chars):"
 msgstr "Lebar (dalam karakter):"
 
-#: ../panel-plugin/calculator.c:438
+#. History
+#: ../panel-plugin/calculator.c:462
 msgid "History"
 msgstr "Riwayat"
 
-#: ../panel-plugin/calculator.c:448
+#: ../panel-plugin/calculator.c:472
 msgid "Size:"
 msgstr "Ukuran:"
 
-#: ../panel-plugin/calculator.c:474
+#. Behavior
+#: ../panel-plugin/calculator.c:483
+msgid "Behavior"
+msgstr "Perilaku"
+
+#: ../panel-plugin/calculator.c:489
+msgid "Do not move cursor after calculation"
+msgstr "Jangan pindahkan kursor setelah menghitung"
+
+#: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
 msgstr "Kalkulator untuk panel Xfce"
 
-#: ../panel-plugin/calculator.c:476
+#: ../panel-plugin/calculator.c:525
 msgid "Copyright (c) 2003-2019\n"
-msgstr ""
+msgstr "Hak Cipta (c) 2003-2019\n"
 
-#: ../panel-plugin/calculator.c:526
+#: ../panel-plugin/calculator.c:575
 msgid "Trigonometrics use degrees"
-msgstr "Trigronometri menggunakan derajat"
+msgstr "Trigonometri menggunakan derajat"
 
-#: ../panel-plugin/calculator.c:529
+#: ../panel-plugin/calculator.c:578
 msgid "Trigonometrics use radians"
 msgstr "Trigonometri menggunakan radian"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:549
+#: ../panel-plugin/calculator.c:598
 msgid "Hexadecimal output"
 msgstr "Keluaran heksadesimal"
 
