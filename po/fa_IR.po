@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 18:35+0100\n"
+"POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Goudarz Jafari <goudarz.jafari@gmail.com>, 2020\n"
 "Language-Team: Persian (Iran) (https://www.transifex.com/xfce/teams/16840/fa_IR/)\n"
@@ -21,57 +21,69 @@ msgstr ""
 "Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../panel-plugin/calculator.c:151
+#: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
 msgstr "خطای ماشین حساب: %s"
 
-#: ../panel-plugin/calculator.c:227
+#: ../panel-plugin/calculator.c:233
 msgid " Calc:"
 msgstr " ماشین حساب:"
 
-#: ../panel-plugin/calculator.c:399
+#: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
 msgstr "پلاگین ماشین حساب"
 
-#: ../panel-plugin/calculator.c:402
+#. add the "Close" button
+#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
 msgid "_Close"
 msgstr "_بستن"
 
-#: ../panel-plugin/calculator.c:416
+#. Appearance
+#: ../panel-plugin/calculator.c:439
 msgid "Appearance"
 msgstr "ظاهر"
 
-#: ../panel-plugin/calculator.c:426
+#: ../panel-plugin/calculator.c:449
 msgid "Width (in chars):"
 msgstr "عرض (در کاراکتر):"
 
-#: ../panel-plugin/calculator.c:438
+#. History
+#: ../panel-plugin/calculator.c:462
 msgid "History"
 msgstr "تاریخچه"
 
-#: ../panel-plugin/calculator.c:448
+#: ../panel-plugin/calculator.c:472
 msgid "Size:"
 msgstr "اندازه:"
 
-#: ../panel-plugin/calculator.c:474
+#. Behavior
+#: ../panel-plugin/calculator.c:483
+msgid "Behavior"
+msgstr ""
+
+#: ../panel-plugin/calculator.c:489
+msgid "Do not move cursor after calculation"
+msgstr ""
+
+#: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
 msgstr "ماشین حساب برای پنل Xfce"
 
-#: ../panel-plugin/calculator.c:476
+#: ../panel-plugin/calculator.c:525
 msgid "Copyright (c) 2003-2019\n"
 msgstr "کپی رایت (c) 2003-2019\n"
 
-#: ../panel-plugin/calculator.c:526
+#: ../panel-plugin/calculator.c:575
 msgid "Trigonometrics use degrees"
 msgstr "مثلثات از درجه استفاده می‌کنند"
 
-#: ../panel-plugin/calculator.c:529
+#: ../panel-plugin/calculator.c:578
 msgid "Trigonometrics use radians"
 msgstr "مثلثات از رادیان استفاده می‌کنند"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:549
+#: ../panel-plugin/calculator.c:598
 msgid "Hexadecimal output"
 msgstr "خروجی شش ضلعی"
 
