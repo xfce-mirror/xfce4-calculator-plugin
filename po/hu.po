@@ -7,15 +7,16 @@
 # Nick Schermer <nick@xfce.org>, 2019
 # gyeben <gyonkibendeguz@gmail.com>, 2019
 # Gábor P., 2019
+# Balázs Meskó <meskobalazs@mailbox.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 18:35+0100\n"
+"POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Gábor P., 2019\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/xfce/teams/16840/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,57 +24,69 @@ msgstr ""
 "Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/calculator.c:151
+#: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
 msgstr "Számológép hiba: %s"
 
-#: ../panel-plugin/calculator.c:227
+#: ../panel-plugin/calculator.c:233
 msgid " Calc:"
 msgstr "Számítás:"
 
-#: ../panel-plugin/calculator.c:399
+#: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
 msgstr "Számológép bővítmény"
 
-#: ../panel-plugin/calculator.c:402
+#. add the "Close" button
+#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
 msgid "_Close"
 msgstr "_Bezárás"
 
-#: ../panel-plugin/calculator.c:416
+#. Appearance
+#: ../panel-plugin/calculator.c:439
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: ../panel-plugin/calculator.c:426
+#: ../panel-plugin/calculator.c:449
 msgid "Width (in chars):"
 msgstr "Szélesség (karakter):"
 
-#: ../panel-plugin/calculator.c:438
+#. History
+#: ../panel-plugin/calculator.c:462
 msgid "History"
 msgstr "Előzmények"
 
-#: ../panel-plugin/calculator.c:448
+#: ../panel-plugin/calculator.c:472
 msgid "Size:"
 msgstr "Méret:"
 
-#: ../panel-plugin/calculator.c:474
+#. Behavior
+#: ../panel-plugin/calculator.c:483
+msgid "Behavior"
+msgstr "Viselkedés"
+
+#: ../panel-plugin/calculator.c:489
+msgid "Do not move cursor after calculation"
+msgstr ""
+
+#: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
 msgstr "Számológép bővítmény Xfce panelhez"
 
-#: ../panel-plugin/calculator.c:476
+#: ../panel-plugin/calculator.c:525
 msgid "Copyright (c) 2003-2019\n"
 msgstr "Copyright (c) 2003-2019\n"
 
-#: ../panel-plugin/calculator.c:526
+#: ../panel-plugin/calculator.c:575
 msgid "Trigonometrics use degrees"
 msgstr "Szögek használata trigonometriához"
 
-#: ../panel-plugin/calculator.c:529
+#: ../panel-plugin/calculator.c:578
 msgid "Trigonometrics use radians"
 msgstr "Radián használata trigonometriához"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:549
+#: ../panel-plugin/calculator.c:598
 msgid "Hexadecimal output"
 msgstr "Hexadecimális kimenet"
 
