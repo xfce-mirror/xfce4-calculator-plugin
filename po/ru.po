@@ -10,6 +10,7 @@
 # Aleksandr P, 2019
 # Igor <f2404@yandex.ru>, 2019
 # Viktor Odintsev <ninetls@xfce.org>, 2020
+# AlexanderFilev, 2020
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Viktor Odintsev <ninetls@xfce.org>, 2020\n"
+"Last-Translator: AlexanderFilev, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/xfce/teams/16840/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,7 +70,7 @@ msgstr "Поведение"
 
 #: ../panel-plugin/calculator.c:489
 msgid "Do not move cursor after calculation"
-msgstr ""
+msgstr "Не перемещать курсор после расчета"
 
 #: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
