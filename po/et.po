@@ -29,7 +29,7 @@ msgstr "Kalkulaatori viga: %s"
 
 #: ../panel-plugin/calculator.c:233
 msgid " Calc:"
-msgstr ""
+msgstr "Arvuta:"
 
 #: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
@@ -65,7 +65,7 @@ msgstr "Käitumine"
 
 #: ../panel-plugin/calculator.c:489
 msgid "Do not move cursor after calculation"
-msgstr ""
+msgstr "Peale arvutamist ära muuda kursori asukohta"
 
 #: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
