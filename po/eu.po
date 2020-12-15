@@ -7,7 +7,7 @@
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2019
 # Piarres Beobide <pi@beobide.net>, 2019
-# beriain, 2019
+# beriain, 2020
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-02 00:46+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: beriain, 2019\n"
+"Last-Translator: beriain, 2020\n"
 "Language-Team: Basque (https://www.transifex.com/xfce/teams/16840/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,11 +63,11 @@ msgstr "Tamaina:"
 #. Behavior
 #: ../panel-plugin/calculator.c:483
 msgid "Behavior"
-msgstr ""
+msgstr "Portaera"
 
 #: ../panel-plugin/calculator.c:489
 msgid "Do not move cursor after calculation"
-msgstr ""
+msgstr "Ez mugitu kurtsorea kalkulua egin ondoren"
 
 #: ../panel-plugin/calculator.c:523
 msgid "Calculator for Xfce panel"
