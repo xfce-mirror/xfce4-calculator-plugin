@@ -64,7 +64,7 @@ typedef struct {
 
 
 
-void calc_save_config(XfcePanelPlugin *plugin, CalcPlugin *calc)
+static void calc_save_config(XfcePanelPlugin *plugin, CalcPlugin *calc)
 {
     XfceRc *rc;
     gchar *file;
@@ -507,7 +507,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     gtk_widget_show(dialog);
 }
 
-void calc_about (XfcePanelPlugin *plugin)
+static void calc_about (XfcePanelPlugin *plugin)
 {
        GdkPixbuf *icon;
    const gchar *authors[] = {
