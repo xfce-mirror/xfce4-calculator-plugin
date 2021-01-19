@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Georgi Georgiev, 2019
+# Georgi Georgiev (Жоро) <g.georgiev.shumen@gmail.com>, 2019
 # Kiril Kirilov <cybercop_montana@abv.bg>, 2020
 # 
 #, fuzzy
