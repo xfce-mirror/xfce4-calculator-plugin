@@ -5,7 +5,7 @@
 # 
 # Translators:
 # GenghisKhan <genghiskhan@gmx.ca>, 2019
-# Omer I.S., 2020
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 # Elishai Eliyahu <elishai@mailfence.com>, 2020
 # 
 #, fuzzy
