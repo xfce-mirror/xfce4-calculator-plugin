@@ -131,7 +131,7 @@ static GList *add_to_expr_hist(GList *ehist, gint hist_size, const gchar *str)
     ehist = g_list_append(ehist, g_strdup(str));
 
     // Remove oldest, if list is growing too long.
-    if (g_list_length(ehist) > hist_size) {
+    if (g_list_length(ehist) > (guint)hist_size) {
         elem = g_list_first(ehist);
         g_free(elem->data);
         ehist = g_list_delete_link(ehist, elem);
@@ -316,12 +316,14 @@ static gboolean calc_size_changed(XfcePanelPlugin *plugin, gint size,
 static gboolean calc_plugin_update_size(XfcePanelPlugin *plugin, gint size,
                                         CalcPlugin *calc)
 {
+	GtkWidget *entry;
+
 	g_assert(calc);
 	g_assert(calc->combo);
 
 	calc->size = size;
 
-	GtkWidget *entry = gtk_bin_get_child (GTK_BIN (calc->combo));
+	entry = gtk_bin_get_child (GTK_BIN (calc->combo));
 	gtk_entry_set_width_chars(GTK_ENTRY(entry), size);
 
 	return TRUE;
@@ -371,6 +373,8 @@ static void angle_unit_chosen(GtkCheckMenuItem *button, CalcPlugin *calc)
 
 static void hexadecimal_output_chosen(GtkCheckMenuItem *button, CalcPlugin *calc)
 {
+    GtkWidget *entry;
+
     g_assert(button == (GtkCheckMenuItem *)calc->hexadecimal_button);
 
     if (gtk_check_menu_item_get_active(button))
@@ -379,7 +383,7 @@ static void hexadecimal_output_chosen(GtkCheckMenuItem *button, CalcPlugin *calc
         calc->output_base = 10;
     }
     // convert current value to new base
-    GtkWidget *entry = gtk_bin_get_child (GTK_BIN (calc->combo));
+    entry = gtk_bin_get_child (GTK_BIN (calc->combo));
     entry_enter_cb(GTK_ENTRY(entry), calc);
 }
 
