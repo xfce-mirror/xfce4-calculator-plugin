@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# vaba <vaba@riseup.net>, 2019
+# Marko Silluste <vaba@riseup.net>, 2019
 # Priit Jõerüüt <transifex@joeruut.com>, 2020
 # 
 #, fuzzy
