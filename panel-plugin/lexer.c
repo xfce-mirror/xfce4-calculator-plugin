@@ -39,11 +39,11 @@ static token_t *get_next_token(const char *input, int *index)
 {
     const char *t;
     token_t *token;
-    int i;
+    int i, n = 0;
 
     g_assert(input);
     g_assert(index);
-    g_assert(*index <= strlen(input));
+    g_assert((size_t)(*index) <= strlen(input));
 
     i = *index;
 
@@ -77,7 +77,6 @@ static token_t *get_next_token(const char *input, int *index)
     } else if (isalpha(input[i])) {
         token->type = TOK_IDENTIFIER;
 
-        int n = 0;
         while (isalnum(input[i]) && n < MAX_ID_LEN) {
             token->val.id[n] = input[i];
             n++, i++;
