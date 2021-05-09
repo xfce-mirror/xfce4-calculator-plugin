@@ -37,7 +37,7 @@ msgstr "Cálculo:"
 
 #: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
-msgstr "Complemento de calculadora"
+msgstr "Complemento para la calculadora"
 
 #. add the "Close" button
 #: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
@@ -98,4 +98,4 @@ msgstr "Calculadora"
 
 #: ../panel-plugin/calculator.desktop.in.h:2
 msgid "Calculator plugin for the Xfce panel"
-msgstr "Complemento de calculadora para el panel de Xfce"
+msgstr "Complemento para la calculadora para el panel de Xfce"
