@@ -29,7 +29,7 @@ msgstr ""
 #: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
-msgstr "Error de cálculo: %s"
+msgstr "Error de la calculadora: %s"
 
 #: ../panel-plugin/calculator.c:233
 msgid " Calc:"
