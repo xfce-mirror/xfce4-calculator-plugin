@@ -33,7 +33,7 @@ msgstr "Error de la calculadora: %s"
 
 #: ../panel-plugin/calculator.c:233
 msgid " Calc:"
-msgstr "Cálculo:"
+msgstr " Cálculo:"
 
 #: ../panel-plugin/calculator.c:417
 msgid "Calculator Plugin"
