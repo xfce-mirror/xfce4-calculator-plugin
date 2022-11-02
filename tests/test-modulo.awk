@@ -6,7 +6,7 @@ function abs(x) {
 
 BEGIN{
     expr = "'1 + 27 % 5 * 3 + -3 % 2'"
-    "../panel-plugin/calctest " expr | getline res
+    ("../panel-plugin/calctest " expr) | getline res
     if (abs(res - 6) > 1.0e-14) {
         print res
         exit 1

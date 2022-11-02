@@ -2,7 +2,7 @@
 
 BEGIN{
     expr = "'0/0'"
-    "../panel-plugin/calctest " expr | getline res
+    ("../panel-plugin/calctest " expr) | getline res
     if ((tolower(res) != "nan") && (tolower(res) != "-nan")) {
         print res
         exit 1

@@ -2,7 +2,7 @@
 
 BEGIN{
     expr = "'-1/0'"
-    "../panel-plugin/calctest " expr | getline res
+    ("../panel-plugin/calctest " expr) | getline res
     if (tolower(res) != "-inf") {
         print res
         exit 1
