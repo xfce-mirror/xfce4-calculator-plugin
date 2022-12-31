@@ -513,14 +513,12 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
 
 static void calc_about (XfcePanelPlugin *plugin)
 {
-       GdkPixbuf *icon;
    const gchar *authors[] = {
       "Erik Edelmann <erik.edelmann@iki.fi>",
       "Adrian Dimitrov <enzo_01@abv.bg>",
       "Roland Kuebert <roland@upic.de>", NULL };
-   icon = xfce_panel_pixbuf_from_source("xfce4-calculator-plugin", NULL, 32);
    gtk_show_about_dialog(NULL,
-      "logo", icon,
+      "logo-icon-name", "xfce4-calculator-plugin",
       "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
       "version", PACKAGE_VERSION,
       "program-name", PACKAGE_NAME,
@@ -528,10 +526,6 @@ static void calc_about (XfcePanelPlugin *plugin)
       "website", "https://docs.xfce.org/panel-plugins/xfce4-calculator-plugin",
       "copyright", _("Copyright (c) 2003-2019\n"),
       "authors", authors, NULL);
-
-   if(icon)
-      g_object_unref(G_OBJECT(icon));
-
 }
 
 
