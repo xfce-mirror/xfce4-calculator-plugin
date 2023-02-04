@@ -26,7 +26,7 @@ AC_INIT([xfce4-calculator-plugin], [calculator_version], [https://gitlab.xfce.or
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 AC_REVISION([$Id])
-AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
 dnl *** Initialize automake ***
@@ -40,8 +40,7 @@ dnl ********************************
 dnl *** Check for basic programs ***
 dnl ********************************
 AC_PROG_CC()
-AC_PROG_CC_C99()
-AC_PROG_LD()
+LT_PATH_LD()
 AC_PROG_INSTALL()
 LT_PREREQ([2.2.6])
 LT_INIT([disable-static])
