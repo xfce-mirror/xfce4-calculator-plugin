@@ -6,17 +6,17 @@
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
 # Jose Riha <jose1711@gmail.com>, 2019
-# Slavko <linux@slavino.sk>, 2020
 # Dušan Kazik <prescott66@gmail.com>, 2020
+# Slavko <linux@slavino.sk>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 00:46+0200\n"
+"POT-Creation-Date: 2022-11-28 15:06+0100\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>, 2020\n"
+"Last-Translator: Slavko <linux@slavino.sk>, 2023\n"
 "Language-Team: Slovak (https://www.transifex.com/xfce/teams/16840/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,66 +27,66 @@ msgstr ""
 #: ../panel-plugin/calculator.c:156
 #, c-format
 msgid "Calculator error: %s"
-msgstr "Chyba pluginu Kalkulačka: %s"
+msgstr "Chyba zás. modulu Kalkulačka: %s"
 
 #: ../panel-plugin/calculator.c:233
 msgid " Calc:"
 msgstr "Vypočítať:"
 
-#: ../panel-plugin/calculator.c:417
+#: ../panel-plugin/calculator.c:421
 msgid "Calculator Plugin"
 msgstr "Zásuvný modul Kalkulačka"
 
 #. add the "Close" button
-#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
+#: ../panel-plugin/calculator.c:424 ../panel-plugin/calculator.c:501
 msgid "_Close"
 msgstr "_Zatvoriť"
 
 #. Appearance
-#: ../panel-plugin/calculator.c:439
+#: ../panel-plugin/calculator.c:443
 msgid "Appearance"
 msgstr "Vzhľad"
 
-#: ../panel-plugin/calculator.c:449
+#: ../panel-plugin/calculator.c:453
 msgid "Width (in chars):"
 msgstr "Šírka (počet znakov):"
 
 #. History
-#: ../panel-plugin/calculator.c:462
+#: ../panel-plugin/calculator.c:466
 msgid "History"
 msgstr "História"
 
-#: ../panel-plugin/calculator.c:472
+#: ../panel-plugin/calculator.c:476
 msgid "Size:"
 msgstr "Veľkosť:"
 
 #. Behavior
-#: ../panel-plugin/calculator.c:483
+#: ../panel-plugin/calculator.c:487
 msgid "Behavior"
 msgstr "Správanie"
 
-#: ../panel-plugin/calculator.c:489
+#: ../panel-plugin/calculator.c:493
 msgid "Do not move cursor after calculation"
 msgstr "Nepresunúť kurzor po vykonaní výpočtu"
 
-#: ../panel-plugin/calculator.c:523
+#: ../panel-plugin/calculator.c:527
 msgid "Calculator for Xfce panel"
 msgstr "Kalkulačka pre panel Xfce"
 
-#: ../panel-plugin/calculator.c:525
+#: ../panel-plugin/calculator.c:529
 msgid "Copyright (c) 2003-2019\n"
 msgstr "Copyright (c) 2003-2019\n"
 
-#: ../panel-plugin/calculator.c:575
+#: ../panel-plugin/calculator.c:579
 msgid "Trigonometrics use degrees"
 msgstr "Trigonometria používa stupne"
 
-#: ../panel-plugin/calculator.c:578
+#: ../panel-plugin/calculator.c:582
 msgid "Trigonometrics use radians"
 msgstr "Trigonometria používa radiány"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:598
+#: ../panel-plugin/calculator.c:602
 msgid "Hexadecimal output"
 msgstr "Hexadecimálny výstup"
 
