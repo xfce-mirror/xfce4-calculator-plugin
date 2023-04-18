@@ -20,8 +20,7 @@ m4_define([calculator_version],
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (C) 2010
-        Erik Edelmann. All rights reserved.])
+AC_COPYRIGHT([Copyright (c) 2003-2023 The Xfce development team. All rights reserved.])
 AC_INIT([xfce4-calculator-plugin], [calculator_version], [https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin/], [xfce4-calculator-plugin])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
