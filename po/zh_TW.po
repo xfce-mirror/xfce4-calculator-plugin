@@ -13,10 +13,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 00:46+0200\n"
+"POT-Creation-Date: 2023-04-19 01:16+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/xfce/teams/16840/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/xfce/teams/16840/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,60 +32,56 @@ msgstr "計算機錯誤：%s"
 msgid " Calc:"
 msgstr "計算機："
 
-#: ../panel-plugin/calculator.c:417
+#: ../panel-plugin/calculator.c:421
 msgid "Calculator Plugin"
 msgstr "計算機插件"
 
 #. add the "Close" button
-#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
+#: ../panel-plugin/calculator.c:424 ../panel-plugin/calculator.c:501
 msgid "_Close"
 msgstr "關閉(_C)"
 
 #. Appearance
-#: ../panel-plugin/calculator.c:439
+#: ../panel-plugin/calculator.c:443
 msgid "Appearance"
 msgstr "外觀"
 
-#: ../panel-plugin/calculator.c:449
+#: ../panel-plugin/calculator.c:453
 msgid "Width (in chars):"
 msgstr "寬度 (多少字元):"
 
 #. History
-#: ../panel-plugin/calculator.c:462
+#: ../panel-plugin/calculator.c:466
 msgid "History"
 msgstr "歷史"
 
-#: ../panel-plugin/calculator.c:472
+#: ../panel-plugin/calculator.c:476
 msgid "Size:"
 msgstr "大小："
 
 #. Behavior
-#: ../panel-plugin/calculator.c:483
+#: ../panel-plugin/calculator.c:487
 msgid "Behavior"
 msgstr "行為"
 
-#: ../panel-plugin/calculator.c:489
+#: ../panel-plugin/calculator.c:493
 msgid "Do not move cursor after calculation"
 msgstr "不要在計算後移動游標"
 
-#: ../panel-plugin/calculator.c:523
+#: ../panel-plugin/calculator.c:525
 msgid "Calculator for Xfce panel"
 msgstr "Xfce 面板的計算機"
 
-#: ../panel-plugin/calculator.c:525
-msgid "Copyright (c) 2003-2019\n"
-msgstr "Copyright (c) 2003-2019\n"
-
-#: ../panel-plugin/calculator.c:575
+#: ../panel-plugin/calculator.c:573
 msgid "Trigonometrics use degrees"
 msgstr "三角函數使用角度"
 
-#: ../panel-plugin/calculator.c:578
+#: ../panel-plugin/calculator.c:576
 msgid "Trigonometrics use radians"
 msgstr "三角函數使用弧度"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:598
+#: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "十六進位輸出"
 
