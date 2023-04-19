@@ -13,7 +13,7 @@ m4_define([calculator_version_minor], [7])
 m4_define([calculator_version_micro], [2])
 m4_define([calculator_version_nano], []) dnl leave this empty to have no nano version
 m4_define([calculator_version_build], [@REVISION@])
-m4_define([calculator_version_tag], [])
+m4_define([calculator_version_tag], [git])
 m4_define([calculator_version],
 [calculator_version_major().calculator_version_minor().calculator_version_micro()ifelse(calculator_version_nano(), [], [], [.calculator_version_nano()])ifelse(calculator_version_tag(), [git], [calculator_version_tag()-calculator_version_build()], [calculator_version_tag()])])
 
