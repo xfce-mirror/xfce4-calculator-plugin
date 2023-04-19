@@ -14,10 +14,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 00:46+0200\n"
+"POT-Creation-Date: 2023-04-19 01:16+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: beriain, 2020\n"
-"Language-Team: Basque (https://www.transifex.com/xfce/teams/16840/eu/)\n"
+"Language-Team: Basque (https://app.transifex.com/xfce/teams/16840/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,60 +33,56 @@ msgstr "Kalkulagailuaren akatsa: %s"
 msgid " Calc:"
 msgstr "Kalk:"
 
-#: ../panel-plugin/calculator.c:417
+#: ../panel-plugin/calculator.c:421
 msgid "Calculator Plugin"
 msgstr "Kalkulagailu plugina"
 
 #. add the "Close" button
-#: ../panel-plugin/calculator.c:420 ../panel-plugin/calculator.c:497
+#: ../panel-plugin/calculator.c:424 ../panel-plugin/calculator.c:501
 msgid "_Close"
 msgstr "_Itxi"
 
 #. Appearance
-#: ../panel-plugin/calculator.c:439
+#: ../panel-plugin/calculator.c:443
 msgid "Appearance"
 msgstr "Itxura"
 
-#: ../panel-plugin/calculator.c:449
+#: ../panel-plugin/calculator.c:453
 msgid "Width (in chars):"
 msgstr "Zabalera (karaktere):"
 
 #. History
-#: ../panel-plugin/calculator.c:462
+#: ../panel-plugin/calculator.c:466
 msgid "History"
 msgstr "Historia"
 
-#: ../panel-plugin/calculator.c:472
+#: ../panel-plugin/calculator.c:476
 msgid "Size:"
 msgstr "Tamaina:"
 
 #. Behavior
-#: ../panel-plugin/calculator.c:483
+#: ../panel-plugin/calculator.c:487
 msgid "Behavior"
 msgstr "Portaera"
 
-#: ../panel-plugin/calculator.c:489
+#: ../panel-plugin/calculator.c:493
 msgid "Do not move cursor after calculation"
 msgstr "Ez mugitu kurtsorea kalkulua egin ondoren"
 
-#: ../panel-plugin/calculator.c:523
+#: ../panel-plugin/calculator.c:525
 msgid "Calculator for Xfce panel"
 msgstr "Xfce panelerako kalkulagailua"
 
-#: ../panel-plugin/calculator.c:525
-msgid "Copyright (c) 2003-2019\n"
-msgstr "Copyright (c) 2003-2019\n"
-
-#: ../panel-plugin/calculator.c:575
+#: ../panel-plugin/calculator.c:573
 msgid "Trigonometrics use degrees"
 msgstr "Trigonometriak gradu hirurogeitarrak erabiltzen ditu"
 
-#: ../panel-plugin/calculator.c:578
+#: ../panel-plugin/calculator.c:576
 msgid "Trigonometrics use radians"
 msgstr "Trigonometriak radianak erabiltzen ditu"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:598
+#: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "Irteera hamaseitarra"
 
