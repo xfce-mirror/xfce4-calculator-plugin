@@ -1,3 +1,31 @@
+0.7.2 (2023-04-19)
+=====
+- Add basic GitLab pipeline
+- Use same automake options as other projects
+- build: Fix intltool lock file problem during make distcheck
+- Update copyright year
+- Remove deprecated project files
+- build: Add missing includes
+- build: Fix autoconf warnings
+- build: Add GLib requirement
+- Use "logo-icon-name" instead of "logo" in about dialog
+- Fix license notices mentioning LGPL (#7)
+- tests: Parenthesize concatenations to avoid ambiguity
+- Fix the 64x64 icon
+- Fix compilation warnings
+- autoconf: Some updates
+- Update bug report URL
+- Make configure.ac.in more friendly to xfce-do-release helper
+- Translation Updates:
+  Albanian, Armenian (Armenia), Basque, Belarusian, Bulgarian, Catalan,
+  Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch,
+  Eastern Armenian, English (Australia), English (Canada), English
+  (United Kingdom), Estonian, Finnish, French, Galician, German,
+  Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Interlingue,
+  Italian, Japanese, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Persian (Iran), Polish, Portuguese, Portuguese (Brazil), Russian,
+  Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, Ukrainian
+
 0.7.1
 ======
 - Add option to not move cursor after calculations (#3)
