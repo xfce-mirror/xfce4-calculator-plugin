@@ -11,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 15:06+0100\n"
+"POT-Creation-Date: 2023-04-19 01:16+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Steve Harris <steve@jbs.ca>, 2023\n"
-"Language-Team: English (Canada) (https://www.transifex.com/xfce/teams/16840/en_CA/)\n"
+"Language-Team: English (Canada) (https://app.transifex.com/xfce/teams/16840/en_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -66,24 +66,20 @@ msgstr "Behaviour"
 msgid "Do not move cursor after calculation"
 msgstr "Do not move cursor after calculation"
 
-#: ../panel-plugin/calculator.c:527
+#: ../panel-plugin/calculator.c:525
 msgid "Calculator for Xfce panel"
 msgstr "Calculator for Xfce panel"
 
-#: ../panel-plugin/calculator.c:529
-msgid "Copyright (c) 2003-2019\n"
-msgstr "Copyright (c) 2003-2019\n"
-
-#: ../panel-plugin/calculator.c:579
+#: ../panel-plugin/calculator.c:573
 msgid "Trigonometrics use degrees"
 msgstr "Trigonometrics use degrees"
 
-#: ../panel-plugin/calculator.c:582
+#: ../panel-plugin/calculator.c:576
 msgid "Trigonometrics use radians"
 msgstr "Trigonometrics use radians"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:602
+#: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "Hexadecimal output"
 
