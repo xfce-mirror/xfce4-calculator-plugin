@@ -53,7 +53,8 @@ desktopdir = $(datadir)/xfce4/panel/plugins
 desktop_in_files = calculator.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-@INTLTOOL_DESKTOP_RULE@
+%.desktop: %.desktop.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST =								\
 	$(desktop_in_files)						\
