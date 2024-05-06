@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:16+0200\n"
+"POT-Creation-Date: 2024-05-06 00:54+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>, 2020\n"
 "Language-Team: Albanian (https://app.transifex.com/xfce/teams/16840/sq/)\n"
@@ -83,11 +83,3 @@ msgstr "Radianë trigonometrikë"
 #: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "Përfundim gjashtëmbëdhjetësh"
-
-#: ../panel-plugin/calculator.desktop.in.h:1
-msgid "Calculator"
-msgstr "Makinë llogaritëse"
-
-#: ../panel-plugin/calculator.desktop.in.h:2
-msgid "Calculator plugin for the Xfce panel"
-msgstr "Shtojcë makinë llogaritëse për panelin e Xfce-së"
