@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Georgi Georgiev (Жоро) <g.georgiev.shumen@gmail.com>, 2019
+# Georgi Georgiev (RacerBG) <g.georgiev.shumen@gmail.com>, 2019
 # Kiril Kirilov <cybercop_montana@abv.bg>, 2020
 # 
 #, fuzzy
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:16+0200\n"
+"POT-Creation-Date: 2024-05-06 00:54+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2020\n"
 "Language-Team: Bulgarian (https://app.transifex.com/xfce/teams/16840/bg/)\n"
@@ -83,11 +83,3 @@ msgstr "Използване на радиани за тригонометрия
 #: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "Шестнадесетичен изход"
-
-#: ../panel-plugin/calculator.desktop.in.h:1
-msgid "Calculator"
-msgstr "Калкулатор"
-
-#: ../panel-plugin/calculator.desktop.in.h:2
-msgid "Calculator plugin for the Xfce panel"
-msgstr "Добавка Калкулатор за панела на Xfce"
