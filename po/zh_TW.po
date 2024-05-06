@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:16+0200\n"
+"POT-Creation-Date: 2024-05-06 00:54+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/xfce/teams/16840/zh_TW/)\n"
@@ -84,11 +84,3 @@ msgstr "三角函數使用弧度"
 #: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "十六進位輸出"
-
-#: ../panel-plugin/calculator.desktop.in.h:1
-msgid "Calculator"
-msgstr "計算機"
-
-#: ../panel-plugin/calculator.desktop.in.h:2
-msgid "Calculator plugin for the Xfce panel"
-msgstr "Xfce 面板的計算機插件"
