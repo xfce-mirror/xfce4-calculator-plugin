@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:16+0200\n"
+"POT-Creation-Date: 2024-05-06 00:54+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2020\n"
 "Language-Team: Portuguese (https://app.transifex.com/xfce/teams/16840/pt/)\n"
@@ -84,11 +84,3 @@ msgstr "Usar radianos trignométricos"
 #: ../panel-plugin/calculator.c:596
 msgid "Hexadecimal output"
 msgstr "Saída hexadecimal"
-
-#: ../panel-plugin/calculator.desktop.in.h:1
-msgid "Calculator"
-msgstr "Calculadora"
-
-#: ../panel-plugin/calculator.desktop.in.h:2
-msgid "Calculator plugin for the Xfce panel"
-msgstr "Plugin calculadora para o painel Xfce"
