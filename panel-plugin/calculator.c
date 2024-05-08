@@ -257,34 +257,13 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
 }
 
 
-/* Used with g_list_foreach() to free data items in a list. */
-
-static void free_stuff(gpointer data, gpointer unused)
-{
-    g_free(data);
-}
-
-
 static void calc_free(XfcePanelPlugin *plugin, CalcPlugin *calc)
 {
-    GtkWidget *dialog;
-
-    dialog = g_object_get_data(G_OBJECT(plugin), "dialog");
+    GtkWidget *dialog = g_object_get_data(G_OBJECT(plugin), "dialog");
     if (dialog != NULL)
         gtk_widget_destroy(dialog);
 
-    gtk_widget_destroy(calc->ebox);
-    gtk_widget_destroy(calc->box);
-    gtk_widget_destroy(calc->combo);
-
-    g_list_foreach(calc->expr_hist, (GFunc)free_stuff, NULL);
-    g_list_free(calc->expr_hist);
-
-    /* 
-     * FIXME: Do we need to free the strings in the combo list, or is the
-     * freeing of expr_hist enough?
-     */
-
+    g_list_free_full(calc->expr_hist, g_free);
     g_slice_free(CalcPlugin, calc);
 }
 
