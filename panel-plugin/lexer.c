@@ -58,7 +58,7 @@ static token_t *get_next_token(const char *input, int *index)
     token = g_malloc(sizeof(token_t));
     token->position = i;
 
-    if (isdigit(input[i]) || input[i] == '.') {
+    if (isdigit(input[i]) || (input[i] == '.' && isdigit(input[i+1]))) {
         token->type = TOK_NUMBER;
         token->val.num = g_strtod(input+i, (char **)&t);
         i = (t - input);
