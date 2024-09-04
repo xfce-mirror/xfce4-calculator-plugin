@@ -141,6 +141,11 @@ static void set_error(GError **err, const char *msg, const token_t *token)
     char pos_str[32];
     int pos;
 
+    static GQuark quark = 0;
+    if (quark == 0) {
+        quark = g_quark_from_static_string("xcp-error-quark");
+    }
+
     if (token) {
         pos = token->position;
         g_snprintf(pos_str, sizeof(pos_str), "position %i", pos+1);
@@ -149,7 +154,7 @@ static void set_error(GError **err, const char *msg, const token_t *token)
         g_snprintf(pos_str, sizeof(pos_str), "end of input");
     }
 
-    g_set_error(err, 0, pos, "At %s: %s", pos_str, msg);
+    g_set_error(err, quark, pos, "At %s: %s", pos_str, msg);
 }
 
 
