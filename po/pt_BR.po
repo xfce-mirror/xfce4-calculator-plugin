@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
-# Michael Martins <michaelfm21@gmail.com>, 2020
+# Michael Martins, 2020
 # Andre Miranda <andre@andreldm.com>, 2024
 # 
 #, fuzzy
