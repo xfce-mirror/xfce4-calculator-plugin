@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nick Schermer <nick@xfce.org>, 2019
+# Marius Ghita, 2023
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-06 12:56+0200\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
+"Language-Team: Romanian (https://app.transifex.com/xfce/teams/16840/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: panel-plugin/calculator.c:156
+#, c-format
+msgid "Calculator error: %s"
+msgstr "Eroare de calcul: %s"
+
+#: panel-plugin/calculator.c:233
+msgid " Calc:"
+msgstr " Calc:"
+
+#: panel-plugin/calculator.c:421
+msgid "Calculator Plugin"
+msgstr "Modul de calculare"
+
+#. add the "Close" button
+#: panel-plugin/calculator.c:424 panel-plugin/calculator.c:501
+msgid "_Close"
+msgstr "În_chide"
+
+#. Appearance
+#: panel-plugin/calculator.c:443
+msgid "Appearance"
+msgstr "Aspect"
+
+#: panel-plugin/calculator.c:453
+msgid "Width (in chars):"
+msgstr "Lățime (în caractere):"
+
+#. History
+#: panel-plugin/calculator.c:466
+msgid "History"
+msgstr "Istoric"
+
+#: panel-plugin/calculator.c:476
+msgid "Size:"
+msgstr "Dimensiune:"
+
+#. Behavior
+#: panel-plugin/calculator.c:487
+msgid "Behavior"
+msgstr "Comportament"
+
+#: panel-plugin/calculator.c:493
+msgid "Do not move cursor after calculation"
+msgstr "Nu mută cursorul după calcul"
+
+#: panel-plugin/calculator.c:525
+msgid "Calculator for Xfce panel"
+msgstr "Calculator pentru panoul Xfce"
+
+#: panel-plugin/calculator.c:573
+msgid "Trigonometrics use degrees"
+msgstr "Trigonometria utilizează grade"
+
+#: panel-plugin/calculator.c:576
+msgid "Trigonometrics use radians"
+msgstr "Trigonometria utilizează radiani"
+
+#. Add checkbox to enable hexadecimal output
+#: panel-plugin/calculator.c:596
+msgid "Hexadecimal output"
+msgstr "Ieșire în hexazecimal"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "Calculator"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Modul de calculare pentru panoul Xfce"
