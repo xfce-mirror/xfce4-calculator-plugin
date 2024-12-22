@@ -249,9 +249,7 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
 
     gtk_entry_set_max_length(GTK_ENTRY(entry), 50);
     gtk_entry_set_width_chars(GTK_ENTRY(entry), calc->size);
-#if GTK_CHECK_VERSION (3, 22, 20)
     gtk_entry_set_input_hints (GTK_ENTRY(entry), GTK_INPUT_HINT_NO_EMOJI);
-#endif
 
     return calc;
 }
@@ -391,18 +389,17 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     GtkWidget *size_label;
     GtkWidget *size_spin;
     GtkWidget *button;
-    GtkWidget *image;
     GtkAdjustment *adjustment;
 
     xfce_panel_plugin_block_menu(plugin);
 
     toplevel = gtk_widget_get_toplevel(GTK_WIDGET(plugin)); 
-    dialog = xfce_titled_dialog_new_with_buttons(_("Calculator Plugin"),
+    dialog = xfce_titled_dialog_new_with_mixed_buttons(_("Calculator Plugin"),
                        GTK_WINDOW(toplevel),
                        GTK_DIALOG_DESTROY_WITH_PARENT,
-                       _("_Close"), GTK_RESPONSE_OK, NULL);
+                       "window-close-symbolic", _("_Close"), GTK_RESPONSE_OK, NULL);
 
-#if LIBXFCE4UI_CHECK_VERSION (4, 15, 1)
+#if !LIBXFCE4UI_CHECK_VERSION (4, 19, 3)
   xfce_titled_dialog_create_action_area (XFCE_TITLED_DIALOG (dialog));
 #endif
 
@@ -475,17 +472,6 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     gtk_widget_show(button);
     g_signal_connect(button, "toggled",
                      G_CALLBACK(calc_move_cursor_changed), calc);
-
-    /* add the "Close" button */
-    button = gtk_button_new_with_mnemonic (_("_Close"));
-    image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_image (GTK_BUTTON (button), image);
-#if LIBXFCE4UI_CHECK_VERSION (4, 15, 1)
-    xfce_titled_dialog_add_action_widget (XFCE_TITLED_DIALOG (dialog), button, GTK_RESPONSE_OK);
-#else
-    gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
-#endif
-    gtk_widget_show (button);
 
     gtk_widget_show(dialog);
 }
