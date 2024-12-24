@@ -1,3 +1,27 @@
+0.7.3 (2024-12-24)
+=====
+- Update copyright year
+- build: Bump dependency versions and fix deprecation warnings
+- I18n: Update po/LINGUAS list
+- parser: Fix GError warning about 0 quark
+- lexer: Fix parsing of dots
+- Fix calc_free
+- Update .gitignore
+- I18n: Update po/LINGUAS list
+- build: Remove unnecessary check for libx11
+- build: Use XDT_VERSION_INIT and get rid of configure.ac.in
+- build: Switch from intltool to gettext
+- Translation Updates:
+  Albanian, Armenian (Armenia), Basque, Belarusian, Bulgarian, Catalan,
+  Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch,
+  Eastern Armenian, English (Australia), English (Canada), English
+  (United Kingdom), Estonian, Finnish, French, Galician, German,
+  Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Interlingue,
+  Italian, Japanese, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Persian (Iran), Polish, Portuguese, Portuguese (Brazil), Romanian,
+  Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish,
+  Ukrainian
+
 0.7.2 (2023-04-19)
 =====
 - Add basic GitLab pipeline
