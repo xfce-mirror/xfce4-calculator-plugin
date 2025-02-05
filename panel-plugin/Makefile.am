@@ -58,7 +58,9 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST =								\
 	$(desktop_in_files)						\
-	grammar.txt
+	grammar.txt							\
+	meson.build							\
+	$(NULL)
 
 CLEANFILES = $(desktop_DATA)
 
