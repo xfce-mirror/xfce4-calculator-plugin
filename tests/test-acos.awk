@@ -6,7 +6,7 @@ function abs(x) {
 
 BEGIN{
     expr = "'pi/acos(-1) + pi/arccos(-1)'"
-    ("../panel-plugin/calctest " expr) | getline res
+    ("calctest " expr) | getline res
     if (abs(res - 2) > 1.0e-14) {
         print res
         exit 1

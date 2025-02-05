@@ -5,7 +5,7 @@ function abs(x) {
 }
 
 BEGIN{
-    "../panel-plugin/calctest '4^3**2'" | getline res
+    "calctest '4^3**2'" | getline res
     if (abs(res - 4096) > 1.0e-15) {
         print res
         exit 1

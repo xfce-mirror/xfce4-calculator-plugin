@@ -6,7 +6,7 @@ function abs(x) {
 
 BEGIN{
     expr = "'log10(100000)+lg(1e20)'"
-    ("../panel-plugin/calctest " expr) | getline res
+    ("calctest " expr) | getline res
     if (abs(res - 25) > 1.0e-14) {
         print res
         exit 1
