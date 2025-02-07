@@ -1,7 +1,12 @@
 # $Id$
 
 EXTRA_DIST =								\
-	$(TESTS)
+	$(TESTS)							\
+	meson.build							\
+	$(NULL)
+
+AM_TESTS_ENVIRONMENT =							\
+	export PATH="$(top_builddir)/panel-plugin:$$PATH";
 
 TESTS = 								\
 	test-simple-expr.awk						\
