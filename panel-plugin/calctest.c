@@ -13,9 +13,10 @@
 
 #define LINE_LENGTH 1024
 
+void interactive(void);
 void calc(const char *input, char *result, size_t result_len);
 
-void interactive()
+void interactive(void)
 {
     char line[LINE_LENGTH], result[LINE_LENGTH];
 
