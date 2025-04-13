@@ -25,6 +25,8 @@ libcalculator_la_SOURCES =					\
 	$(BACKEND_SRC)
 
 libcalculator_la_CFLAGS =					\
+	$(GLIB_CFLAGS)							\
+	$(GTK_CFLAGS)							\
 	$(LIBXFCE4UTIL_CFLAGS)					\
 	$(LIBXFCE4UI_CFLAGS)					\
 	$(LIBXFCE4PANEL_CFLAGS)					\
@@ -38,6 +40,8 @@ libcalculator_la_LDFLAGS =					\
 	$(PLATFORM_LDFLAGS)
 
 libcalculator_la_LIBADD =					\
+	$(GLIB_LIBS)							\
+	$(GTK_LIBS)								\
 	$(LIBXFCE4UTIL_LIBS)					\
 	$(LIBXFCE4UI_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)

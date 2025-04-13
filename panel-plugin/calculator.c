@@ -492,7 +492,7 @@ static void calc_about (XfcePanelPlugin *plugin)
       "program-name", PACKAGE_NAME,
       "comments", _("Calculator for Xfce panel"),
       "website", "https://docs.xfce.org/panel-plugins/xfce4-calculator-plugin",
-      "copyright", "Copyright \302\251 2003-2024 The Xfce development team",
+      "copyright", "Copyright \302\251 2003-" COPYRIGHT_YEAR " The Xfce development team",
       "authors", authors, NULL);
 }
 
