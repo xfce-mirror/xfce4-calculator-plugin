@@ -58,6 +58,7 @@ typedef struct {
     GList *expr_hist;   // Expression history
     
     // Settings
+    GtkWidget *settings_dialog;
     gboolean degrees; // Degrees or radians for trigonometric functions?
     gint size;		  // Size of comboboxentry 
     gint hist_size;
@@ -373,7 +374,6 @@ static void calc_dialog_response(GtkWidget *dialog, gint response,
 {
     if (response == GTK_RESPONSE_OK || response == GTK_RESPONSE_DELETE_EVENT) {
         g_object_set_data(G_OBJECT(calc->plugin), "dialog", NULL);
-        xfce_panel_plugin_unblock_menu(calc->plugin);
         calc_save_config(calc->plugin, calc);
         gtk_widget_destroy(dialog);
     }
@@ -394,13 +394,17 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     GtkWidget *button;
     GtkAdjustment *adjustment;
 
-    xfce_panel_plugin_block_menu(plugin);
+    if (calc->settings_dialog != NULL) {
+        gtk_window_present(GTK_WINDOW(calc->settings_dialog));
+        return;
+    }
 
     toplevel = gtk_widget_get_toplevel(GTK_WIDGET(plugin)); 
-    dialog = xfce_titled_dialog_new_with_mixed_buttons(_("Calculator Plugin"),
+    calc->settings_dialog = dialog = xfce_titled_dialog_new_with_mixed_buttons(_("Calculator Plugin"),
                        GTK_WINDOW(toplevel),
                        GTK_DIALOG_DESTROY_WITH_PARENT,
                        "window-close-symbolic", _("_Close"), GTK_RESPONSE_OK, NULL);
+    g_object_add_weak_pointer(G_OBJECT(dialog), (gpointer *)&calc->settings_dialog);
 
 #if !LIBXFCE4UI_CHECK_VERSION (4, 19, 3)
   xfce_titled_dialog_create_action_area (XFCE_TITLED_DIALOG (dialog));
