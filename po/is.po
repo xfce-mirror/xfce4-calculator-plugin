@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Xfce
-# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2024
+# Sveinn í Felli <sv1@fellsnet.is>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
-"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-05-06 12:56+0200\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-15 00:49+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>, 2024\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>, 2020\n"
 "Language-Team: Icelandic (https://app.transifex.com/xfce/teams/16840/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,72 +21,63 @@ msgstr ""
 "Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
-#: panel-plugin/calculator.c:156
+#: ../panel-plugin/calculator.c:160
 #, c-format
 msgid "Calculator error: %s"
 msgstr "Villa í útreikningi: %s"
 
-#: panel-plugin/calculator.c:233
+#: ../panel-plugin/calculator.c:237
 msgid " Calc:"
 msgstr " Reikna:"
 
-#: panel-plugin/calculator.c:421
+#: ../panel-plugin/calculator.c:403
 msgid "Calculator Plugin"
 msgstr "Reiknivélarviðbót"
 
-#. add the "Close" button
-#: panel-plugin/calculator.c:424 panel-plugin/calculator.c:501
+#: ../panel-plugin/calculator.c:406
 msgid "_Close"
 msgstr "_Loka"
 
 #. Appearance
-#: panel-plugin/calculator.c:443
+#: ../panel-plugin/calculator.c:426
 msgid "Appearance"
 msgstr "Útlit"
 
-#: panel-plugin/calculator.c:453
+#: ../panel-plugin/calculator.c:436
 msgid "Width (in chars):"
 msgstr "Breidd (í stöfum):"
 
 #. History
-#: panel-plugin/calculator.c:466
+#: ../panel-plugin/calculator.c:449
 msgid "History"
 msgstr "Ferill"
 
-#: panel-plugin/calculator.c:476
+#: ../panel-plugin/calculator.c:459
 msgid "Size:"
 msgstr "Stærð:"
 
 #. Behavior
-#: panel-plugin/calculator.c:487
+#: ../panel-plugin/calculator.c:470
 msgid "Behavior"
 msgstr "Hegðun"
 
-#: panel-plugin/calculator.c:493
+#: ../panel-plugin/calculator.c:476
 msgid "Do not move cursor after calculation"
 msgstr ""
 
-#: panel-plugin/calculator.c:525
+#: ../panel-plugin/calculator.c:497
 msgid "Calculator for Xfce panel"
 msgstr "Reiknivél fyrir XFCE-spjald"
 
-#: panel-plugin/calculator.c:573
+#: ../panel-plugin/calculator.c:545
 msgid "Trigonometrics use degrees"
 msgstr "Hornareikningar nota gráður"
 
-#: panel-plugin/calculator.c:576
+#: ../panel-plugin/calculator.c:548
 msgid "Trigonometrics use radians"
 msgstr "Hornareikningar nota radíana"
 
 #. Add checkbox to enable hexadecimal output
-#: panel-plugin/calculator.c:596
+#: ../panel-plugin/calculator.c:568
 msgid "Hexadecimal output"
 msgstr "Sextándakerfis frálag"
-
-#: panel-plugin/calculator.desktop.in:5
-msgid "Calculator"
-msgstr "Reiknivél"
-
-#: panel-plugin/calculator.desktop.in:6
-msgid "Calculator plugin for the Xfce panel"
-msgstr "Reiknivélarviðbót fyrir XFCE-spjald"
