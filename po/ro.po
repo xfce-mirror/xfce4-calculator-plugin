@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
 # Marius Ghita, 2023
-# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 00:49+0200\n"
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:05+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2025\n"
 "Language-Team: Romanian (https://app.transifex.com/xfce/teams/16840/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,63 +23,71 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../panel-plugin/calculator.c:160
+#: panel-plugin/calculator.c:157
 #, c-format
 msgid "Calculator error: %s"
 msgstr "Eroare de calcul: %s"
 
-#: ../panel-plugin/calculator.c:237
+#: panel-plugin/calculator.c:234
 msgid " Calc:"
 msgstr " Calc:"
 
-#: ../panel-plugin/calculator.c:403
+#: panel-plugin/calculator.c:400
 msgid "Calculator Plugin"
 msgstr "Modul de calculare"
 
-#: ../panel-plugin/calculator.c:406
+#: panel-plugin/calculator.c:403
 msgid "_Close"
 msgstr "În_chide"
 
 #. Appearance
-#: ../panel-plugin/calculator.c:426
+#: panel-plugin/calculator.c:423
 msgid "Appearance"
 msgstr "Aspect"
 
-#: ../panel-plugin/calculator.c:436
+#: panel-plugin/calculator.c:433
 msgid "Width (in chars):"
 msgstr "Lățime (în caractere):"
 
 #. History
-#: ../panel-plugin/calculator.c:449
+#: panel-plugin/calculator.c:446
 msgid "History"
 msgstr "Istoric"
 
-#: ../panel-plugin/calculator.c:459
+#: panel-plugin/calculator.c:456
 msgid "Size:"
 msgstr "Dimensiune:"
 
 #. Behavior
-#: ../panel-plugin/calculator.c:470
+#: panel-plugin/calculator.c:467
 msgid "Behavior"
 msgstr "Comportament"
 
-#: ../panel-plugin/calculator.c:476
+#: panel-plugin/calculator.c:473
 msgid "Do not move cursor after calculation"
 msgstr "Nu mută cursorul după calcul"
 
-#: ../panel-plugin/calculator.c:497
+#: panel-plugin/calculator.c:494
 msgid "Calculator for Xfce panel"
 msgstr "Calculator pentru panoul Xfce"
 
-#: ../panel-plugin/calculator.c:545
+#: panel-plugin/calculator.c:542
 msgid "Trigonometrics use degrees"
 msgstr "Trigonometria utilizează grade"
 
-#: ../panel-plugin/calculator.c:548
+#: panel-plugin/calculator.c:545
 msgid "Trigonometrics use radians"
 msgstr "Trigonometria utilizează radiani"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:568
+#: panel-plugin/calculator.c:565
 msgid "Hexadecimal output"
 msgstr "Ieșire în hexazecimal"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "Calculator"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Modul de calculare pentru panoul Xfce"
