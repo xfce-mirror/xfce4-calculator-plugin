@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Michael Findlay <translate@cobber-linux.org>, 2019
-# John Humphrys <johnswagon+transifex@pm.me>, 2020
+# John Humphrys <johnswagon+transifex@pm.me>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 00:49+0200\n"
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:05+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: John Humphrys <johnswagon+transifex@pm.me>, 2020\n"
+"Last-Translator: John Humphrys <johnswagon+transifex@pm.me>, 2025\n"
 "Language-Team: English (Australia) (https://app.transifex.com/xfce/teams/16840/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,63 +22,71 @@ msgstr ""
 "Language: en_AU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/calculator.c:160
+#: panel-plugin/calculator.c:157
 #, c-format
 msgid "Calculator error: %s"
 msgstr "Calculator error: %s"
 
-#: ../panel-plugin/calculator.c:237
+#: panel-plugin/calculator.c:234
 msgid " Calc:"
 msgstr " Calc:"
 
-#: ../panel-plugin/calculator.c:403
+#: panel-plugin/calculator.c:400
 msgid "Calculator Plugin"
 msgstr "Calculator Plugin"
 
-#: ../panel-plugin/calculator.c:406
+#: panel-plugin/calculator.c:403
 msgid "_Close"
 msgstr "_Close"
 
 #. Appearance
-#: ../panel-plugin/calculator.c:426
+#: panel-plugin/calculator.c:423
 msgid "Appearance"
 msgstr "Appearance"
 
-#: ../panel-plugin/calculator.c:436
+#: panel-plugin/calculator.c:433
 msgid "Width (in chars):"
 msgstr "Width (in chars):"
 
 #. History
-#: ../panel-plugin/calculator.c:449
+#: panel-plugin/calculator.c:446
 msgid "History"
 msgstr "History"
 
-#: ../panel-plugin/calculator.c:459
+#: panel-plugin/calculator.c:456
 msgid "Size:"
 msgstr "Size:"
 
 #. Behavior
-#: ../panel-plugin/calculator.c:470
+#: panel-plugin/calculator.c:467
 msgid "Behavior"
 msgstr "Behavior"
 
-#: ../panel-plugin/calculator.c:476
+#: panel-plugin/calculator.c:473
 msgid "Do not move cursor after calculation"
 msgstr ""
 
-#: ../panel-plugin/calculator.c:497
+#: panel-plugin/calculator.c:494
 msgid "Calculator for Xfce panel"
 msgstr "Calculator for Xfce panel"
 
-#: ../panel-plugin/calculator.c:545
+#: panel-plugin/calculator.c:542
 msgid "Trigonometrics use degrees"
 msgstr "Trigonometrics use degrees"
 
-#: ../panel-plugin/calculator.c:548
+#: panel-plugin/calculator.c:545
 msgid "Trigonometrics use radians"
 msgstr "Trigonometrics use radians"
 
 #. Add checkbox to enable hexadecimal output
-#: ../panel-plugin/calculator.c:568
+#: panel-plugin/calculator.c:565
 msgid "Hexadecimal output"
 msgstr "Hexadecimal output"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "Calculator"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Calculator plugin for the Xfce panel"
