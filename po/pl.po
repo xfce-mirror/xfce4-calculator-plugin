@@ -69,7 +69,7 @@ msgstr "Nie przesuwaj kursora po obliczeniu"
 
 #: panel-plugin/calculator.c:494
 msgid "Calculator for Xfce panel"
-msgstr "Kalkulator dla panelu Xfce"
+msgstr "Kalkulator dla panelu Xfce."
 
 #: panel-plugin/calculator.c:542
 msgid "Trigonometrics use degrees"
