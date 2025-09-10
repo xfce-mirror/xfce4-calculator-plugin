@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nick Schermer <nick@xfce.org>, 2019
+# Abduqadir Abliz <sahranbay@gmail.com>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:05+0200\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>, 2025\n"
+"Language-Team: Uyghur (https://app.transifex.com/xfce/teams/16840/ug/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ug\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: panel-plugin/calculator.c:157
+#, c-format
+msgid "Calculator error: %s"
+msgstr "ھېسابلىغۇچ خاتالىقى: %s"
+
+#: panel-plugin/calculator.c:234
+msgid " Calc:"
+msgstr " ھېسابلىغۇچ:"
+
+#: panel-plugin/calculator.c:400
+msgid "Calculator Plugin"
+msgstr "ھېسابلىغۇچ قىستۇرمىسى"
+
+#: panel-plugin/calculator.c:403
+msgid "_Close"
+msgstr "ياپ(_C)"
+
+#. Appearance
+#: panel-plugin/calculator.c:423
+msgid "Appearance"
+msgstr "كۆرۈنۈشى"
+
+#: panel-plugin/calculator.c:433
+msgid "Width (in chars):"
+msgstr "كەڭلىك (ھەرپ):"
+
+#. History
+#: panel-plugin/calculator.c:446
+msgid "History"
+msgstr "تارىخ"
+
+#: panel-plugin/calculator.c:456
+msgid "Size:"
+msgstr "چوڭلۇقى:"
+
+#. Behavior
+#: panel-plugin/calculator.c:467
+msgid "Behavior"
+msgstr "ھەرىكەت"
+
+#: panel-plugin/calculator.c:473
+msgid "Do not move cursor after calculation"
+msgstr "ھېسابلىغاندىن كېيىن نۇر بەلگىنى يۆتكىمەيدۇ"
+
+#: panel-plugin/calculator.c:494
+msgid "Calculator for Xfce panel"
+msgstr "Xfce كۆزنەكچەنىڭ ھېسابلىغۇچى"
+
+#: panel-plugin/calculator.c:542
+msgid "Trigonometrics use degrees"
+msgstr "تىرىگونومېتىرىيەلىك فۇنكسىيەدە بۇلۇڭ ئىشلىتىش"
+
+#: panel-plugin/calculator.c:545
+msgid "Trigonometrics use radians"
+msgstr "تىرىگونومېتىرىيەلىك فۇنكسىيەدە ياي ئىشلىتىش"
+
+#. Add checkbox to enable hexadecimal output
+#: panel-plugin/calculator.c:565
+msgid "Hexadecimal output"
+msgstr "ئون ئالتىلىك ئۆلچەمدە چىقىرىش"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "ھېسابلىغۇچ"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Xfce كۆزنەكچىنىڭ ھېسابلىغۇچ قىستۇرمىسى"
