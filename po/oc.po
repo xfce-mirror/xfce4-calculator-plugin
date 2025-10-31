@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Cédric Valmary <cvalmary@yahoo.fr>, 2019
+# Quentin PAGÈS, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:05+0200\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Quentin PAGÈS, 2025\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/xfce/teams/16840/oc/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: oc\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: panel-plugin/calculator.c:157
+#, c-format
+msgid "Calculator error: %s"
+msgstr "Error de la calculadoira : %s"
+
+#: panel-plugin/calculator.c:234
+msgid " Calc:"
+msgstr "Calcul :"
+
+#: panel-plugin/calculator.c:400
+msgid "Calculator Plugin"
+msgstr "Empeuton de calculadoira"
+
+#: panel-plugin/calculator.c:403
+msgid "_Close"
+msgstr "_Tampar"
+
+#. Appearance
+#: panel-plugin/calculator.c:423
+msgid "Appearance"
+msgstr "Aparéncia"
+
+#: panel-plugin/calculator.c:433
+msgid "Width (in chars):"
+msgstr "Largor (en caractèrs) :"
+
+#. History
+#: panel-plugin/calculator.c:446
+msgid "History"
+msgstr "Istoric"
+
+#: panel-plugin/calculator.c:456
+msgid "Size:"
+msgstr "Talha :"
+
+#. Behavior
+#: panel-plugin/calculator.c:467
+msgid "Behavior"
+msgstr "Compòrtament"
+
+#: panel-plugin/calculator.c:473
+msgid "Do not move cursor after calculation"
+msgstr "Desplaçar pas lo cursor aprèp calcul"
+
+#: panel-plugin/calculator.c:494
+msgid "Calculator for Xfce panel"
+msgstr "Calculadoira pel panèl Xfce"
+
+#: panel-plugin/calculator.c:542
+msgid "Trigonometrics use degrees"
+msgstr "La trigonometria utiliza los graus"
+
+#: panel-plugin/calculator.c:545
+msgid "Trigonometrics use radians"
+msgstr "La trigonometria utiliza los radians"
+
+#. Add checkbox to enable hexadecimal output
+#: panel-plugin/calculator.c:565
+msgid "Hexadecimal output"
+msgstr "Sortida en exadecimala"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "Calculadoira"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "Empeuton de calculadoira pel panèl Xfce"
