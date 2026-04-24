@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# BoneNI, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:05+0200\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: BoneNI, 2026\n"
+"Language-Team: Lao (https://app.transifex.com/xfce/teams/16840/lo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: panel-plugin/calculator.c:157
+#, c-format
+msgid "Calculator error: %s"
+msgstr "ຂໍ້ຜິດພາດຂອງເຄື່ອງຄິດເລກ: %s"
+
+#: panel-plugin/calculator.c:234
+msgid " Calc:"
+msgstr " ຄິດເລກ:"
+
+#: panel-plugin/calculator.c:400
+msgid "Calculator Plugin"
+msgstr "ປລັກອິນເຄື່ອງຄິດເລກ"
+
+#: panel-plugin/calculator.c:403
+msgid "_Close"
+msgstr "_ປິດ"
+
+#. Appearance
+#: panel-plugin/calculator.c:423
+msgid "Appearance"
+msgstr "ຮູບລັກສະນະ"
+
+#: panel-plugin/calculator.c:433
+msgid "Width (in chars):"
+msgstr "ຄວາມກວ້າງ (ເປັນຕົວອັກສອນ):"
+
+#. History
+#: panel-plugin/calculator.c:446
+msgid "History"
+msgstr "ປະຫວັດ"
+
+#: panel-plugin/calculator.c:456
+msgid "Size:"
+msgstr "ຂະໜາດ:"
+
+#. Behavior
+#: panel-plugin/calculator.c:467
+msgid "Behavior"
+msgstr "ພຶດຕິກຳ"
+
+#: panel-plugin/calculator.c:473
+msgid "Do not move cursor after calculation"
+msgstr "ບໍ່ຕ້ອງຍ້າຍເຄີເຊີຫຼັງຈາກການຄິດໄລ່"
+
+#: panel-plugin/calculator.c:494
+msgid "Calculator for Xfce panel"
+msgstr "ເຄື່ອງຄິດເລກສຳລັບແຖບງານ Xfce"
+
+#: panel-plugin/calculator.c:542
+msgid "Trigonometrics use degrees"
+msgstr "ຕີໂກນມິຕິນຳໃຊ້ອົງສາ"
+
+#: panel-plugin/calculator.c:545
+msgid "Trigonometrics use radians"
+msgstr "ຕີໂກນມິຕິນຳໃຊ້ເຣດຽນ"
+
+#. Add checkbox to enable hexadecimal output
+#: panel-plugin/calculator.c:565
+msgid "Hexadecimal output"
+msgstr "ຜົນໄດ້ຮັບເປັນເລກຖານສິບຫົກ"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "ເຄື່ອງຄິດເລກ"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "ປລັກອິນເຄື່ອງຄິດເລກສຳລັບແຖບງານ Xfce"
