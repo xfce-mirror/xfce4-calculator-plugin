@@ -6,8 +6,8 @@
 # Translators:
 # fri, 2019
 # Nick Schermer <nick@xfce.org>, 2019
-# Michal Várady <miko.vaji@gmail.com>, 2020
 # Pavel Borecki <pavel.borecki@gmail.com>, 2025
+# Michal Várady <miko.vaji@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:05+0200\n"
 "PO-Revision-Date: 2019-01-14 12:47+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2025\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2026\n"
 "Language-Team: Czech (https://app.transifex.com/xfce/teams/16840/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Chyba kalkulátoru: %s"
 
 #: panel-plugin/calculator.c:234
 msgid " Calc:"
-msgstr "Kalkulátor"
+msgstr "Kalkulátor:"
 
 #: panel-plugin/calculator.c:400
 msgid "Calculator Plugin"
