@@ -200,13 +200,16 @@ static node_t *get_parentised_expr(token_stack_t *stack, GError **err)
     if (tmp_err) {
         g_propagate_error(err, tmp_err);
         free_parsetree(node);
+        g_free(token);
         return NULL;
     }
 
-    if (!node) { 
+    if (!node) {
         // Re-use the RPAREN token for this error message.
         token->position++;
         set_error(err, "Expected expression", token);
+        g_free(token);
+        return NULL;
     }
     g_free(token);
 
