@@ -164,7 +164,7 @@ static node_t *get_number(token_stack_t *stack, GError **err)
     token = token_pop(stack);
 
     if (token && token->type == TOK_NUMBER) {
-        node = g_malloc(sizeof(node_t));
+        node = g_new(node_t, 1);
         node->type = NODE_NUMBER;
         node->val.num = token->val.num;
         node->left = node->right = NULL;
@@ -254,12 +254,12 @@ static node_t *get_pow(token_stack_t *stack, GError **err)
     case TOK_IDENTIFIER:
         token = token_pop(stack);
         if (find_constant(token->val.id, &x)) {
-            node = g_malloc(sizeof(node_t));
+            node = g_new(node_t, 1);
             node->type = NODE_NUMBER;
             node->val.num = x;
             node->left = node->right = NULL;
         } else if (find_function(token->val.id, &fun)) {
-            node = g_malloc(sizeof(node_t));
+            node = g_new(node_t, 1);
             node->type = NODE_FUNCTION;
             node->val.fun = fun;
             node->left = NULL;
@@ -296,7 +296,7 @@ static node_t *get_spow(token_stack_t *stack, GError **err)
 
     if (token->type == TOK_OPERATOR && token->val.op == '-') {
         g_free(token_pop(stack));
-        node = g_malloc(sizeof(node_t));
+        node = g_new(node_t, 1);
         node->type = NODE_OPERATOR;
         node->val.op = OP_UMINUS;
         node->left = NULL;
@@ -329,7 +329,7 @@ static node_t *get_spowtail(token_stack_t *stack, node_t *left_expr, GError **er
     } else if (!(token->type == TOK_OPERATOR && token->val.op == '^'))
         return left_expr;
 
-    op = g_malloc(sizeof(node_t));
+    op = g_new(node_t, 1);
     op->left = left_expr;
     op->type = NODE_OPERATOR;
     op->val.op = OP_POW;
@@ -386,7 +386,7 @@ static node_t *get_factortail(token_stack_t *stack, node_t *left_expr, GError **
     } else if (!(token->type == TOK_OPERATOR && is_mult_op(token->val.op)))
         return left_expr;
 
-    op = g_malloc(sizeof(node_t));
+    op = g_new(node_t, 1);
     op->left = left_expr;
     op->type = NODE_OPERATOR;
     switch (token->val.op) {
@@ -467,7 +467,7 @@ static node_t *get_termtail(token_stack_t *stack, node_t *left_expr,
         return left_expr;
     }
 
-    op = g_malloc(sizeof(node_t));
+    op = g_new(node_t, 1);
     op->left = left_expr;
     op->type = NODE_OPERATOR;
     switch (token->val.op) {

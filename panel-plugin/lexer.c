@@ -51,7 +51,7 @@ static token_t *get_next_token(const char *input, int *index)
 
     if (!input[i]) return NULL;
 
-    token = g_malloc(sizeof(token_t));
+    token = g_new(token_t, 1);
     token->position = i;
 
     if (isdigit(input[i]) || (input[i] == '.' && isdigit(input[i+1]))) {
@@ -141,7 +141,7 @@ token_stack_t *lexer(const char *input)
     token_stack_t *stack;
     int index = 0;
 
-    stack = g_malloc(sizeof(token_stack_t));
+    stack = g_new(token_stack_t, 1);
     stack->top = get_next_token(input, &index);
     token = stack->top;
     while (token) {
