@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-calculator-plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# ზურაბი დავითაშვილი <zurabi@tuta.io>, 2020
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-panel-plugins.xfce4-calculator-plugin\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:05+0200\n"
+"PO-Revision-Date: 2019-01-14 12:47+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026\n"
+"Language-Team: Georgian (https://app.transifex.com/xfce/teams/16840/ka/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: panel-plugin/calculator.c:157
+#, c-format
+msgid "Calculator error: %s"
+msgstr "კალკულატორის შეცდომა: %s"
+
+#: panel-plugin/calculator.c:234
+msgid " Calc:"
+msgstr " კალკ:"
+
+#: panel-plugin/calculator.c:400
+msgid "Calculator Plugin"
+msgstr "კალკულატორის დამატება"
+
+#: panel-plugin/calculator.c:403
+msgid "_Close"
+msgstr "და_ხურვა"
+
+#. Appearance
+#: panel-plugin/calculator.c:423
+msgid "Appearance"
+msgstr "გარეგნობა"
+
+#: panel-plugin/calculator.c:433
+msgid "Width (in chars):"
+msgstr "სიგანე (სიმბოლოებში):"
+
+#. History
+#: panel-plugin/calculator.c:446
+msgid "History"
+msgstr "ისტორია"
+
+#: panel-plugin/calculator.c:456
+msgid "Size:"
+msgstr "ზომა:"
+
+#. Behavior
+#: panel-plugin/calculator.c:467
+msgid "Behavior"
+msgstr "ქცევა"
+
+#: panel-plugin/calculator.c:473
+msgid "Do not move cursor after calculation"
+msgstr "კურსორის არგადაადგილება გამოთვლის შემდეგ"
+
+#: panel-plugin/calculator.c:494
+msgid "Calculator for Xfce panel"
+msgstr "კალკულატორი Xfce-ის პანელისთვის"
+
+#: panel-plugin/calculator.c:542
+msgid "Trigonometrics use degrees"
+msgstr "ტრიგონომეტრია იყენებს გრადუსებს"
+
+#: panel-plugin/calculator.c:545
+msgid "Trigonometrics use radians"
+msgstr "ტრიგონომეტრია იყენებს რადიანებს"
+
+#. Add checkbox to enable hexadecimal output
+#: panel-plugin/calculator.c:565
+msgid "Hexadecimal output"
+msgstr "თექვსმეტობითში გამოტანა"
+
+#: panel-plugin/calculator.desktop.in:5
+msgid "Calculator"
+msgstr "კალკულატორი"
+
+#: panel-plugin/calculator.desktop.in:6
+msgid "Calculator plugin for the Xfce panel"
+msgstr "კალკულატორის დამატება Xfce-ის პანელისთვის"
